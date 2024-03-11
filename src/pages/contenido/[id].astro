@@ -1,0 +1,9 @@
+---
+import ArticlePost from "../../layouts/ArticlePost.astro"
+import { posts } from "/blog.js"
+
+
+const { posts } = Astro.props
+---
+
+<ArticlePost article={posts} />

@@ -1,0 +1,32 @@
+---
+import CategoryIcon from "../components/Icons/CategoryIcon.astro"
+import VideoIcon from "../components/Icons/VideoIcon.astro"
+import HourglassIcon from "../components/Icons/HourglassIcon.astro"
+import ArticleIcon from "../components/Icons/ArticleIcon.astro"
+import SidebarLink from "../components/SidebarLink.astro"
+---
+
+<aside>
+  <nav class="flex flex-col  gap-4">
+    <SidebarLink className="fill-white hover:fill-black">
+      <CategoryIcon  className="w-7"/>
+      <span>Categorias</span>
+    </SidebarLink>
+    <SidebarLink className="stroke-white hover:stroke-black fill-none">
+      <VideoIcon className="w-7"/>
+      <span>Redes Sociales</span>
+    </SidebarLink>
+    <SidebarLink className="stroke-white hover:stroke-black fill-none">
+      <VideoIcon  className="w-7"/>
+      <span>Videos</span>
+    </SidebarLink>
+    <SidebarLink className="stroke-white hover:stroke-black">
+      <HourglassIcon className="w-7"/>
+      <span>Shorts</span>
+    </SidebarLink>
+    <SidebarLink className="stroke-white hover:stroke-black">
+      <ArticleIcon className="w-7"/>
+      <span>Articles</span>
+    </SidebarLink>
+  </nav>
+</aside>

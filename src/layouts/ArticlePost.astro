@@ -1,0 +1,64 @@
+---
+import Header from "../components/Header.astro"
+import Body from "../components/Body.astro"
+import Content from "../components/Content.astro"
+
+import { Image } from 'astro:assets'
+
+const aspectRatio = 2.0
+const width = 720 * 2
+const height = width / aspectRatio
+
+interface ListItem {
+  text: string
+}
+
+interface List {
+  title: string
+  list: string[]
+  footer: string
+}
+
+interface Video {
+  status: boolean
+  link: string
+}
+interface Questions {
+  question: string
+  title: string
+  list: string[]
+}
+
+export interface Props {
+  title: string
+  category: string
+  image: string
+  introduction: string
+  list: List[]
+  warning: string
+  video: Video
+  caution: string
+  questions: Questions[]
+}
+
+const { content: {title, description} } Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+
+  <Body>
+    <Header />
+    <main class="pt-[56px]">
+      <Content className="pt-6">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <h1 class="text-3xl my-1">{title}</h1>
+          <div>{description}</div>
+          <hr class="border-top border-zinc-400 my-4">
+        </section>
+      </Content>
+    </main>
+  </Body>
+</html>

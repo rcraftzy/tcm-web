@@ -1,0 +1,83 @@
+---
+import Header from "../components/Header.astro"
+import Body from "../components/Body.astro"
+import Content from "../components/Content.astro"
+
+import { Image } from 'astro:assets'
+
+const aspectRatio = 2.0
+const width = 720 * 2
+const height = width / aspectRatio
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+
+  <Body>
+    <Header />
+    <main class="pt-[56px]">
+      <Content>
+        <section>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <li class="text-center mb-4">
+              <a href="">
+                <Image
+                  class="border border-l-slate-300 rounded-xl"
+                  src={"/images/contents/12.png"}
+                  width={width}
+                  height={height}
+                  aspectRatio={aspectRatio}
+                  alt="Thumbnail"
+                />
+                <div class="mt-3 text-xl font-bold">
+                  Titulo
+                </div>
+                <div class="opacity-70">
+                  Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+                </div>
+              </a>
+            </li>
+<li class="text-center mb-4">
+              <a href="">
+                <Image
+                  class="border border-l-slate-300 rounded-xl"
+                  src={"/images/contents/12.png"}
+                  width={width}
+                  height={height}
+                  aspectRatio={aspectRatio}
+                  alt="Thumbnail"
+                />
+                <div class="mt-3 text-xl font-bold">
+                  Titulo
+                </div>
+                <div class="opacity-70">
+                  Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+                </div>
+              </a>
+            </li>
+<li class="text-center mb-4">
+              <a href="">
+                <Image
+                  class="border border-l-slate-300 rounded-xl"
+                  src={"/images/contents/12.png"}
+                  width={width}
+                  height={height}
+                  aspectRatio={aspectRatio}
+                  alt="Thumbnail"
+                />
+                <div class="mt-3 text-xl font-bold">
+                  Titulo
+                </div>
+                <div class="opacity-70">
+                  Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </Content>
+    </main>
+  </Body>
+</html>

@@ -1,0 +1,9 @@
+---
+export interface Props {
+  className?: string
+}
+const { className = '' } = Astro.props
+---
+<a class={`flex items-center gap-3 hover:bg-white hover:text-black cursor-pointer ${className}`}>
+  <slot/>
+</a>

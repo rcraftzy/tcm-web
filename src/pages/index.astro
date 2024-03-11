@@ -1,4 +1,13 @@
 ---
+import Header from "../components/Header.astro"
+import Body from "../components/Body.astro"
+import Content from "../components/Content.astro"
+import Sidebar from "../components/Sidebar.astro"
+import { Image } from 'astro:assets'
+
+const aspectRatio = 2.8
+const width = 360 * 2
+const height = width / aspectRatio
 
 ---
 
@@ -10,7 +19,21 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <Body>
+    <Header />
+    <main class="pt-[56px]">
+      <section class="relative mb-6 h-80 flex justify-center items-center">
+        <Image 
+          src={"/images/masthead/carousel-2.jpg"}
+          width={width}
+          height={height}
+          aspectRatio={aspectRatio}
+          alt="Thumbnail"
+        />
+      </section>
+      <Content>
+      </Content>
+      <Sidebar />
+    </main>
+  </Body>
 </html>
