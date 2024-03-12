@@ -3,30 +3,36 @@ import CategoryIcon from "../components/Icons/CategoryIcon.astro"
 import VideoIcon from "../components/Icons/VideoIcon.astro"
 import HourglassIcon from "../components/Icons/HourglassIcon.astro"
 import ArticleIcon from "../components/Icons/ArticleIcon.astro"
+import ShareIcon from "../components/Icons/ShareIcon.astro"
 import SidebarLink from "../components/SidebarLink.astro"
+
+export interface Props {
+  className?: string
+}
+const { className } = Astro.props
 ---
 
-<aside>
-  <nav class="flex flex-col  gap-4">
-    <SidebarLink className="fill-white hover:fill-black">
+<aside class={className}>
+  <nav class="flex flex-col  gap-2">
+    <SidebarLink className="fill-gray-400 hover:fill-black">
       <CategoryIcon  className="w-7"/>
-      <span>Categorias</span>
+      <span>Categorías</span>
     </SidebarLink>
-    <SidebarLink className="stroke-white hover:stroke-black fill-none">
-      <VideoIcon className="w-7"/>
+    <SidebarLink className="stroke-gray-400 hover:stroke-black fill-none">
+      <ShareIcon className="w-7"/>
       <span>Redes Sociales</span>
     </SidebarLink>
-    <SidebarLink className="stroke-white hover:stroke-black fill-none">
+    <SidebarLink className="stroke-gray-400 hover:stroke-black fill-none">
       <VideoIcon  className="w-7"/>
       <span>Videos</span>
     </SidebarLink>
-    <SidebarLink className="stroke-white hover:stroke-black">
+    <SidebarLink className="stroke-gray-400 hover:stroke-black">
       <HourglassIcon className="w-7"/>
       <span>Shorts</span>
     </SidebarLink>
-    <SidebarLink className="stroke-white hover:stroke-black">
+    <SidebarLink className="stroke-gray-400 hover:stroke-black">
       <ArticleIcon className="w-7"/>
-      <span>Articles</span>
+      <span>Artículos</span>
     </SidebarLink>
   </nav>
 </aside>
