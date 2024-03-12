@@ -2,6 +2,9 @@
 import Header from "../components/Header.astro"
 import Body from "../components/Body.astro"
 import Content from "../components/Content.astro"
+import Sidebar from "../components/Sidebar.astro"
+import BaseHead from '../components/BaseHead.astro'
+import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
 
 import { Image } from 'astro:assets'
 
@@ -13,71 +16,75 @@ const height = width / aspectRatio
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <BaseHead title={`Contenido / ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
   </head>
-
   <Body>
     <Header />
-    <main class="pt-[56px]">
-      <Content>
-        <section>
-          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <li class="text-center mb-4">
-              <a href="">
-                <Image
-                  class="border border-l-slate-300 rounded-xl"
-                  src={"/images/contents/12.png"}
-                  width={width}
-                  height={height}
-                  aspectRatio={aspectRatio}
-                  alt="Thumbnail"
-                />
-                <div class="mt-3 text-xl font-bold">
-                  Titulo
-                </div>
-                <div class="opacity-70">
-                  Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-                </div>
-              </a>
-            </li>
-<li class="text-center mb-4">
-              <a href="">
-                <Image
-                  class="border border-l-slate-300 rounded-xl"
-                  src={"/images/contents/12.png"}
-                  width={width}
-                  height={height}
-                  aspectRatio={aspectRatio}
-                  alt="Thumbnail"
-                />
-                <div class="mt-3 text-xl font-bold">
-                  Titulo
-                </div>
-                <div class="opacity-70">
-                  Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-                </div>
-              </a>
-            </li>
-<li class="text-center mb-4">
-              <a href="">
-                <Image
-                  class="border border-l-slate-300 rounded-xl"
-                  src={"/images/contents/12.png"}
-                  width={width}
-                  height={height}
-                  aspectRatio={aspectRatio}
-                  alt="Thumbnail"
-                />
-                <div class="mt-3 text-xl font-bold">
-                  Titulo
-                </div>
-                <div class="opacity-70">
-                  Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-                </div>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </Content>
-    </main>
+    <article class={`px-8 mx-auto max-w-3xl`}>
+      <main class="pt-20">
+        <div class="grid grid-cols-4 gap-4">
+          <section class="col-span-4 md:col-span-3">
+            <section>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <li class="text-center mb-4">
+                  <a href="">
+                    <Image
+                      class="border border-l-slate-300 rounded-xl"
+                      src={"/images/contents/12.png"}
+                      width={width}
+                      height={height}
+                      aspectRatio={aspectRatio}
+                      alt="Thumbnail"
+                    />
+                    <div class="mt-3 text-xl font-bold">
+                      Titulo
+                    </div>
+                    <div class="opacity-70">
+                      Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+                    </div>
+                  </a>
+                </li>
+                <li class="text-center mb-4">
+                  <a href="">
+                    <Image
+                      class="border border-l-slate-300 rounded-xl"
+                      src={"/images/contents/12.png"}
+                      width={width}
+                      height={height}
+                      aspectRatio={aspectRatio}
+                      alt="Thumbnail"
+                    />
+                    <div class="mt-3 text-xl font-bold">
+                      Titulo
+                    </div>
+                    <div class="opacity-70">
+                      Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+                    </div>
+                  </a>
+                </li>
+                <li class="text-center mb-4">
+                  <a href="">
+                    <Image
+                      class="border border-l-slate-300 rounded-xl"
+                      src={"/images/contents/12.png"}
+                      width={width}
+                      height={height}
+                      aspectRatio={aspectRatio}
+                      alt="Thumbnail"
+                    />
+                    <div class="mt-3 text-xl font-bold">
+                      Titulo
+                    </div>
+                    <div class="opacity-70">
+                      Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </section>
+          <Sidebar className="col-span-3 md:col-span-1 h-fit md:sticky top-0" />
+        </div>
+      </main>
   </Body>
 </html>
