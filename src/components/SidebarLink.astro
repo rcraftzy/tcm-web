@@ -1,9 +1,21 @@
 ---
-export interface Props {
-  className?: string
-}
-const { className = '' } = Astro.props
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
+
+const { href, className, ...props } = Astro.props
+// const isActive = href === Astro.url.pathname.replace(/\/$/, '')
+// const { pathname } = Astro.url;
+// const pathname = "short"
+// const isActive = href === pathname || href === pathname.replace(/\/$/, '');
+
+const pathnameSegments = Astro.url.pathname.split('/');
+const lastSegment = pathnameSegments[pathnameSegments.length - 1];
+const isActive = href === lastSegment;
 ---
-<a class={`flex items-center gap-3 text-gray-500 hover:bg-white hover:text-black cursor-pointer rounded-lg p-1 ${className}`}>
+<a href={href} class:list={[className, `flex items-center gap-3 text-gray-500 hover:bg-white hover:text-black cursor-pointer rounded-lg p-1`, { active: isActive }]}>
   <slot/>
 </a>
+<style>
+  a.active {
+    background: white;
+  }
+</style>

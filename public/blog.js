@@ -1,43 +1,6 @@
-export const posts = [
-  {
-    "titulo":"Altavoz",
-    "tipo":"celulares",
-    "img":"assets/img/Altavoz-300x212.png",
-    "presentacion":"El altavoz es el componente del dispositivo que se encarga de emitir el sonido, es indispensable para reproducir audios.",
-    "lista1":{
-      "titulo":"Ante qué situaciones se daña mi altavoz:",
-      "lista":[
-        {"text":"Golpes y caídas: los golpes deterioran y desconectan  las piezas del dispositivo."},
-        {"text":"Suciedad: los dispositivos cuentan con ranuras para el altavoz, por las que entran impurezas."},
-        {"text":"Líquidos: la presencia de humedad corroe los dispositivos."},
-        {"text":"Mal funcionamiento: se dan comportamientos raros por daños en el códec de audio. "}
-      ],
-      "footer":"Para estos casos, el equipo de TeamCellmania cuenta con el servicio de reparación o cambio de altavoz para todas las marcas."
-    },
-    "arvertencia":"Para recibir más información o un costo de reparación, te invitamos a acercarte a uno de nuestros locales, recuerda que es IMPORTANTE para nuestros técnicos hacer un diagnóstico previo a la reparación.",
-    "video":{
-      "status":true,
-      "link":"https://www.youtube.com/watch?v=jiPOkkb84nE"
-    },
-    "precausion":"Cada dispositivo tiene diferentes procesos de reparación, lo que se describe a continuación son pasos generales para reparación de equipos, para más información revise la sección de \"Nuestro Contenido\" o nuestro canal de youtube.",
-    "pregunta":{
-      "pregunta":"¿Cómo realizan nuestros técnicos la reparación del glass?",
-      "titulo":"Después de realizar un correcto diagnóstico por nuestros técnicos, se realizan los siguientes pasos:",
-      "lista":[
-        {"text":"Desmontaje del equipo: se retira los componentes para acceder y poder retirar la pantalla, en este caso se debe tener mucho cuidado, ya que, la pantalla se reparará y no remplazará."},
-        {"text":"Limpieza de la pantalla: una vez retirado el glass se limpia la goma de la pantalla."},
-        {"text":"Montaje: se coloca una lámina de goma y el nuevo glass para unir la pantalla."},
-        {"text":"Sellado: se coloca la pantalla en una máquina de vacío para unirla y colocarla en su marco."},
-        {"text":"Revisión: se pasa a revisar que la pantalla reparada esté en completo y correcto funcionamiento."},
-        {"text":"Revisión del Bisel: una vez que se extrae la pantalla se revisa el lugar en el que se colocará el remplazo, esto, como prevención para el correcto funcionamiento."},
-        {"text":"Limpieza: se realiza una limpieza profunda de la base retirando el pegamento anterior con el que se unía la pantalla."},
-        {"text":"Comprobación de funcionamiento: se pasa a revisar que el repuesto esté en completo y correcto funcionamiento."},
-        {"text":"Montaje: se vuelve a armar el equipo con todos sus componentes."}
 
-      ]
-    }
-  },
-  {
+export const posts = [
+    {
     "titulo":"Auricular",
     "tipo":"celulares",
     "img":"assets/img/Auricular-300x212.png",
