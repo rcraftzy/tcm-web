@@ -9,7 +9,7 @@ const posts = (await getCollection('blog')).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 
-const aspectRatio = 2.0
+const aspectRatio = 1.4157
 const width = 720 * 2
 const height = width / aspectRatio
 
@@ -17,7 +17,7 @@ const height = width / aspectRatio
 <ContentPost>
   <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
     {posts.map((post) => (
-      <li class="text-center mb-4">
+      <li class="mb-4">
         <a href={`/contenido/${post.slug}/`}>
           <Image
             class="border border-l-slate-300 rounded-xl"
@@ -30,8 +30,8 @@ const height = width / aspectRatio
           <div class="mt-3 text-xl font-bold">
             {post.data.title}
           </div>
-          <div class="opacity-70">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+          <div class="text-left opacity-70 line-clamp-3">
+            {post.data.description}
           </div>
         </a>
       </li>
