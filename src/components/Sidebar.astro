@@ -15,23 +15,23 @@ const { className } = Astro.props
 
 <aside class={className}>
   <nav class="flex flex-col  gap-2">
-    <SidebarLink className={`fill-gray-400 hover:fill-black`} href="contenido/categorias" >
+    <SidebarLink className={`fill-gray-400 hover:fill-black`} href="/contenido/categorias" >
       <CategoryIcon  className="w-7"/>
       <span>Categorías</span>
     </SidebarLink>
-    <SidebarLink className={`stroke-gray-400 hover:stroke-black fill-none`} href="contenido/social" >
+    <SidebarLink className={`stroke-gray-400 hover:stroke-black fill-none`} href="/contenido/social" >
       <ShareIcon className="w-7"/>
       <span>Redes Sociales</span>
     </SidebarLink>
-    <SidebarLink href="contenido/videos" className="stroke-gray-400 hover:stroke-black fill-none">
+    <SidebarLink href="/contenido/videos" className="stroke-gray-400 hover:stroke-black fill-none">
       <VideoIcon  className="w-7"/>
       <span>Videos</span>
     </SidebarLink>
-    <SidebarLink href="contenido/short" className="stroke-gray-400 hover:stroke-black">
+    <SidebarLink href="/contenido/short" className="stroke-gray-400 hover:stroke-black">
       <HourglassIcon className="w-7"/>
       <span>Shorts</span>
     </SidebarLink>
-    <SidebarLink href="contenido/articulos" className="stroke-gray-400 hover:stroke-black">
+    <SidebarLink href="/contenido/articulos" className="stroke-gray-400 hover:stroke-black">
       <ArticleIcon className="w-7"/>
       <span>Artículos</span>
     </SidebarLink>
