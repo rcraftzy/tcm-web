@@ -17,14 +17,17 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
     <article class={`px-8 mx-auto max-w-3xl`}>
       <main class="pt-20">
         <div class="grid grid-cols-4 gap-4">
-          <section class="col-span-4 md:col-span-3">
+          <div class="col-span-4 md:col-span-3">
             <section>
-              <slot></slot>
+              <section>
+                <slot></slot>
+              </section>
             </section>
-          </section>
+          </div>
           <Sidebar className="col-span-4 md:col-span-1 h-fit md:sticky top-0" />
         </div>
       </main>
+    </article>
   </Body>
 </html>
 
