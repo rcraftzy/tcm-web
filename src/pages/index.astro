@@ -20,18 +20,36 @@ const height = width / aspectRatio
   <Body>
     <Header />
     <main class="pt-[56px]">
-      <section class="relative mb-6 h-80 flex justify-center items-center">
-        <Image 
-          src={"/images/masthead/carousel-2.jpg"}
-          width={width}
-          height={height}
-          aspectRatio={aspectRatio}
-          alt="Thumbnail"
-        />
+      <section class="relative mb-6 h-80 px-8 mx-auto max-w-4xl flex justify-center items-center">
+        <section class="grid grid-cols-9">
+          <aside class="col-span-3 ">
+            <h1 class="text-6xl font-bold">
+              Descubre 
+            </h1>
+            <span class="text-lg opacity-70">
+              Productos más recientes y las últimas ofertas en tecnología y figuras coleccionables
+            </span>
+            <button class="mt-5 bg-white px-8 py-2 text-lg text-black text-center font-bold rounded-2xl">
+              Explora Ahora
+            </button>
+          </aside>
+          <section class="col-span-6 ml-36">
+            <section class="grid grid-rows-2 grid-flow-col gap-4">
+              <div class="row-span-2">
+                <img src="/images/contents/Cambio-Tapa-2-300x212.png" alt="IT">
+              </div>
+              <div class="col-span-2">
+                <img src="images/masthead/carousel-2.jpg" alt="IT">
+              </div>
+              <div class="col-span-2">
+                <img src="images/masthead/carousel-1.jpg" alt="IT">
+              </div>
+            </section>
+          </section>
+        </section>
       </section>
       <Content>
       </Content>
-      <Sidebar />
     </main>
   </Body>
 </html>
