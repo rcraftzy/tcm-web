@@ -3,6 +3,8 @@ title: Sensores
 description: Los sensores del dispositivo permiten varias funciones, desde girar la pantalla con el giroscopio, hasta desbloquear el celular con el lector de huellas digitales.
 heroImage: /images/contents/197.png
 pubDate: Jul 08 2022
+tags: 
+    - articulo
 ---
 
 Cuáles son los daños de los sensores:

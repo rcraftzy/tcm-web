@@ -3,6 +3,8 @@ title: Cámara
 description: Las cámaras de nuestro dispositivo se conforman de la cámara frontal y el juego de cámaras trasero, que se encuentran conectados en la placa de nuestro dispositivo.
 heroImage: /images/contents/Camara-300x212.png
 pubDate: Jul 08 2022
+tags: 
+    - articulo
 ---
 
 Ante qué situaciones se daña mi cámara:

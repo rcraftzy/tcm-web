@@ -3,6 +3,8 @@ title: Altavoz
 description: El altavoz es el componente del dispositivo que se encarga de emitir el sonido, es indispensable para reproducir audios.
 heroImage: /images/contents/Altavoz-300x212.png
 pubDate: Jul 08 2022
+tags: 
+    - articulo
 ---
 
 

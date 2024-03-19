@@ -3,6 +3,8 @@ title: Mejoras
 description: La mayoría de laptops, hoy en día, permiten obtener mejoras en el dispositivo al tener diseños modulares.
 heroImage: /images/contents/197.png
 pubDate: Jul 08 2022
+tags: 
+    - articulo
 ---
 
 Cuándo necesita mi laptop una mejora:

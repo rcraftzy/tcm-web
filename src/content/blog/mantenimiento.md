@@ -3,6 +3,8 @@ title: Mantenimiento
 description: El mantenimiento de un equipo, es esencial para el correcto funcionamiento y alargar la vida útil de nuestro dispositivo.
 heroImage: /images/contents/197.png
 pubDate: Jul 08 2022
+tags: 
+    - articulo
 ---
 
 Ante qué situaciones debo hacer un mantenimiento a mi computadora:

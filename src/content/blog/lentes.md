@@ -3,6 +3,8 @@ title: Lentes
 description: Las cámaras de nuestro dispositivo se componen de dos partes el lente protector que se encuentra en el exterior y la cámara que se encuentra en la placa.
 heroImage: /images/contents/Lente-300x212.png
 pubDate: Jul 08 2022
+tags: 
+    - articulo
 ---
 
 Ante qué situaciones se daña mi cámara:

@@ -3,6 +3,8 @@ title: Carcasa
 description: La estructura de nuestro computador o laptop, se encarga de funciones tanto estéticas como de protección, por lo que es importante tenerla en óptimo estado.
 heroImage: /images/contents/197.png
 pubDate: Jul 08 2022
+tags: 
+    - articulo
 ---
 
 En qué casos debo cambiar mi carcasa:

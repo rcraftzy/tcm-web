@@ -3,6 +3,8 @@ title: Tapa
 description: La tapa de nuestro dispositivo, cumple con la función de protección y estética, sin embargo, suele romperse muy fácilmente.
 heroImage: /images/contents/Cambio-Tapa-2-300x212.png
 pubDate: 'Jul 08 2022'
+tags: 
+    - articulo
 ---
 
 Ante qué situaciones se daña mi tapa:

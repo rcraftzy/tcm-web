@@ -3,6 +3,8 @@ title: Lector SIM
 description: El lector de la tarjeta SIM es necesaria para tener una línea de operadora con la cual realizar llamadas y recibir mensajes.
 heroImage: /images/contents/Lector-Sim-300x212.png
 pubDate: Jul 08 2022
+tags: 
+    - articulo
 ---
 
 Ante qué situaciones se daña mi lector de tarjeta SIM:
