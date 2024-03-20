@@ -6,3 +6,15 @@ body {
   text-rendering: optimizeLegibility;
   overflow-wrap: break-word;
 }
+
+ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+blockquote {
+  background-color: red;
+}
+
+
