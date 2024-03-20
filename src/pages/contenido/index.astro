@@ -9,32 +9,27 @@ const posts = (await getCollection('blog')).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 
-const aspectRatio = 1.4157
-const width = 720 * 2
-const height = width / aspectRatio
-
+let originalWidth = 300;
+let newHeight = Math.round((originalWidth * 9) / 16);
 ---
 <ContentPost>
-  <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
     {posts.map((post) => (
-      <li class="mb-4">
-        <a href={`/contenido/${post.slug}/`}>
+        <a href={`/contenido/${post.slug}/`} class="mb-4">
           <Image
-            class="border border-l-slate-300 rounded-xl"
+            class="aspect-video border border-zinc-700 rounded-xl object-cover"
             src={post.data.heroImage}
-            width={width}
-            height={height}
-            aspectRatio={aspectRatio}
-            alt="Thumbnail"
+            width={originalWidth}
+            height={newHeight}
+            alt="tumbnail"
           />
-          <div class="mt-3 text-xl font-bold">
+          <div class="mt-2 text-base font-bold">
             {post.data.title}
           </div>
-          <div class="text-left opacity-70 line-clamp-3">
+          <div class="text-left opacity-70 text-sm line-clamp-3">
             {post.data.description}
           </div>
         </a>
-      </li>
-    ))}
-  </ul>
+      ))}
+  </section>
 </ContentPost>
