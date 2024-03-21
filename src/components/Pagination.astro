@@ -1,0 +1,43 @@
+---
+import { ArrowIcon } from "./Icons/ArrowIcon";
+import LinkButton from "./LinkButton.astro";
+
+export interface Props {
+  currentPage: number;
+  totalPages: number;
+  prevUrl: string;
+  nextUrl: string;
+}
+
+const { currentPage, totalPages, prevUrl, nextUrl } = Astro.props;
+
+const prev = currentPage > 1 ? "" : "disabled";
+const next = currentPage < totalPages ? "" : "disabled";
+---
+
+{
+  totalPages > 1 && (
+    <nav class="pagination-wrapper flex justify-end gap-2" aria-label="Pagination">
+      <LinkButton
+        disabled={prev === "disabled"}
+        href={prevUrl}
+        className={`select-none ${prev}`}
+        ariaLabel="Previous"
+      >
+        <div class="w-10 p-2 rounded-lg rotate-180 stroke-black bg-white">
+          <ArrowIcon />
+        </div>
+      </LinkButton>
+      <LinkButton
+        disabled={next === "disabled"}
+        href={nextUrl}
+        className={`select-none ${next}`}
+        ariaLabel="Next"
+      >
+        <div class={`w-10 p-2 rounded-lg stroke-black ${prev} bg-white`}>
+          <ArrowIcon />
+        </div>
+      </LinkButton>
+    </nav>
+  )
+}
