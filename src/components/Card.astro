@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+
+export interface Props {
+  href?: string;
+  frontmatter: CollectionEntry<"blog">["data"];
+}
+const { href, frontmatter } = Astro.props
+const { title, pubDate, modDate, heroImage, description, tags, readingTime } = frontmatter;
+
+console.log(readingTime)
+
+let originalWidth = 300;
+let newHeight = Math.round((originalWidth * 9) / 16);
+---
+<a href={href} class="mb-4">
+  <Image
+    class="aspect-video border border-zinc-700 rounded-xl object-cover"
+    src={heroImage ? heroImage : '/images/contents/197.png'}
+    width={originalWidth}
+    height={newHeight}
+    alt="tumbnail"
+  />
+  <div class="mt-2 text-md font-bold">
+    {title}
+  </div>
+  <div class="text-left opacity-70 text-sm mb-2 line-clamp-3">
+    {description}
+  </div>
+  <div class="flex justify-between">
+    {
+      tags.map (t => (
+        <span class="p-2 rounded-md text-xs font-bold">{t}</span>
+      ))
+    }
+  </div>
+</a>
