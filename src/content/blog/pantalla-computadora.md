@@ -3,8 +3,10 @@ title: Pantalla
 description: Uno de los problemas comunes con las laptops es el fallo de la pantalla, haciendo necesaria la reparación o cambio.
 heroImage: /images/contents/197.png
 pubDate: Jul 08 2022
+modDate: Jul 08 2022
+draft: false
 tags: 
-    - articulo
+    - Reparación
 ---
 
 Ante qué situaciones se puede dañar mi pantalla

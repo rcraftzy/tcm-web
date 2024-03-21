@@ -3,8 +3,10 @@ title: Mojado
 description: Una de las situaciones más comunes y que más dañan dispositivos es exponer los celulares a líquidos, ya sea agua, bebidas u otras sustancias.
 heroImage: /images/contents/Mojado-300x212.png
 pubDate: Jul 08 2022
+modDate: Jul 08 2022
+draft: false
 tags: 
-    - articulo
+    - Reparación
 ---
 
 ¿Qué pasa si mi celular está mojado?

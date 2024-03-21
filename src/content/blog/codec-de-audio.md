@@ -3,8 +3,10 @@ title: CODEC de Audio
 description: El CODEC de audio es el controlador de sonido de nuestro equipo tanto del micrófono, altavoz y auricular, por lo que, si se daña este componente las funciones de audio se verán afectadas
 heroImage: /images/contents/197.png
 pubDate: Jul 08 2022
+modDate: Jul 08 2022
+draft: false
 tags: 
-    - articulo
+    - Reparación
 ---
 
 Ante qué situaciones se daña mi CODEC de audio:

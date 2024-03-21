@@ -3,8 +3,10 @@ title: Memoria RAM
 description: La memoria RAM de nuestro dispositivo es donde se ejecutan los programas y hasta el sistema operativo, por lo que entre mayor capacidad o mejor funcionamiento, mejor rendimiento del dispositivo.
 heroImage: /images/contents/197.png
 pubDate: Jul 08 2022
+modDate: Jul 08 2022
+draft: false
 tags: 
-    - articulo
+    - Reparación
 ---
 
 Ante qué situaciones debo cambiar o aumentar mi memoria RAM:

@@ -3,8 +3,10 @@ title: Sistema Operativo
 description: El funcionamiento del dispositivo se basa en su sistema operativo y programas para el control de cada componente.
 heroImage: /images/contents/197.png
 pubDate: Jul 08 2022
+modDate: Jul 08 2022
+draft: false
 tags: 
-    - articulo
+    - Reparación
 ---
 
 Cuándo debo revisar el sistema operativo de mi equipo:

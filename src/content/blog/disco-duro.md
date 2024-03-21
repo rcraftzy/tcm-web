@@ -3,8 +3,10 @@ title: Disco Duro
 description: El disco duro de nuestro dispositivo, es donde se guarda toda la información que tenemos incluyendo el sistema con el que funciona nuestro equipo.
 heroImage: /images/contents/197.png
 pubDate: Jul 08 2022
+modDate: Jul 08 2022
+draft: false
 tags: 
-    - articulo
+    - Reparación
 ---
 
 Ante qué situaciones debo cambiar el disco duro:

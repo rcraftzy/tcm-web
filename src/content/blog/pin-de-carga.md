@@ -3,8 +3,10 @@ title: Pin de carga
 description: El pin de carga es un puerto del celular para conectar el cable cargador, dada la fácil manipulación es muy frecuente su ruptura, y siendo una parte fundamental para el funcionamiento de nuestro dispositivo su reparación es esencial.
 heroImage: /images/contents/Pin-Carga-2-300x300.png
 pubDate: Jul 08 2022
+modDate: Jul 08 2022
+draft: false
 tags: 
-    - articulo
+    - Reparación
 ---
 
 Ante qué situaciones se daña mi pin de carga:

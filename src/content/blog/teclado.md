@@ -3,8 +3,10 @@ title: Teclado
 description: Uno de los problemas comunes en las laptops es el mal funcionamiento del teclado, siendo un daño completo o de ciertas teclas.
 heroImage: /images/contents/197.png
 pubDate: Jul 08 2022
+modDate: Jul 08 2022
+draft: false
 tags: 
-    - articulo
+    - Reparación
 ---
 
 Ante qué situaciones se puede dañar el teclado de mi laptop:

@@ -3,8 +3,10 @@ title: Ventilación
 description: La ventilación de nuestro dispositivo es esencial para el funcionamiento del equipo, ya que nos ayuda a mantener la temperatura constante de nuestro equipo, lo que permite que los componentes tengan una vida útil mayor y una mejor eficacia.
 heroImage: /images/contents/197.png
 pubDate: Jul 08 2022
+modDate: Jul 08 2022
+draft: false
 tags: 
-    - articulo
+    - Reparación
 ---
 
 Porque debo revisar la ventilación del equipo:
