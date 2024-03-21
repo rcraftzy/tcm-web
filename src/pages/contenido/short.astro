@@ -2,6 +2,7 @@
 import ContentPost from '../../layouts/ContentPost.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../config.ts';
 import { getCollection } from 'astro:content';
+import ContentPages from '../../components/ContentPages.jsx'
 
 import { Image } from 'astro:assets'
 
@@ -14,27 +15,7 @@ const width = 720 * 2
 const height = width / aspectRatio
 
 ---
+
 <ContentPost>
-  <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    {posts.map((post) => (
-      <li class="mb-4">
-        <a href={`/contenido/${post.slug}/`}>
-          <Image
-            class="border border-l-slate-300 rounded-xl"
-            src={post.data.heroImage}
-            width={width}
-            height={height}
-            aspectRatio={aspectRatio}
-            alt="Thumbnail"
-          />
-          <div class="mt-3 text-xl font-bold">
-            {post.data.title}
-          </div>
-          <div class="text-left opacity-70 line-clamp-3">
-            {post.data.description}
-          </div>
-        </a>
-      </li>
-    ))}
-  </ul>
+  <ContentPages client:load posts={posts} />
 </ContentPost>

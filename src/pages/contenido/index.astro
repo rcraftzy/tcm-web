@@ -15,7 +15,7 @@ let newHeight = Math.round((originalWidth * 9) / 16);
 <ContentPost>
   <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
     {posts.map((post) => (
-        <a href={`/contenido/${post.slug}/`} class="mb-4">
+        <a href={`/contenido/articulos/${post.slug}/`} class="mb-4">
           <Image
             class="aspect-video border border-zinc-700 rounded-xl object-cover"
             src={post.data.heroImage}
