@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import addClasses from 'rehype-add-classes'
 
 import react from "@astrojs/react";
+import { remarkReadingTime } from './remark-reading-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,6 +11,7 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: 'prism',
     gfm: true,
+    remarkPlugins: [remarkReadingTime],
     rehypePlugins: [
       [
         addClasses,
