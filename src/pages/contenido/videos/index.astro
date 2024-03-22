@@ -1,10 +1,12 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import Videos from "../../../layouts/Videos.astro";
+import VideoPosts from "../../../layouts/VideoPosts.astro";
 import ArticlePost from "../../../layouts/ArticlePost.astro"
 import getSortedPosts from "../../../utils/getSortedPosts";
+import getSortedVideos from "../../../utils/getSortedVideos"
 import getPageNumbers from "../../../utils/getPageNumbers";
 import getPagination from "../../../utils/getPagination";
+import { db, Videos } from "astro:db";
 
 interface Videos {
   link: string
@@ -15,5 +17,15 @@ interface Videos {
 export interface Props {
   videos: Videos[]
 }
+
+const videos = await db.select().from(Videos);
+
+const sortedPost = await getSortedVideos(videos)
+
+const pagination = getPagination({
+  posts: sortedPost,
+  page: 1,
+  isIndex: true,
+})
 ---
-<Videos />
+<VideoPosts {...pagination} />
