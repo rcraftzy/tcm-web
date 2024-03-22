@@ -1,9 +1,7 @@
 ---
-import { db, Videos } from 'astro:db';
+import CardVideos from '../components/CardVideos.astro';
 import Pagination from '../components/Pagination.astro';
-import ContentPost from './ContentPost.astro'
-
-import { Image } from 'astro:assets'
+import type { Video } from "../types"
 
 export interface Prosp {
   currentPage: number;
@@ -11,46 +9,26 @@ export interface Prosp {
 }
 
 const { currentPage, totalPages, paginatedPosts } = Astro.props
-
-const originalWidth = 300;
-let newHeight = Math.round((originalWidth * 9) / 16);
-
 ---
-<ContentPost>
-  <header class="flex justify-between">
-    <a href="/contenido/articulos" class="bg-[#00538F] font-mplus pt-2 px-4 rounded-xl">Ver articulos</a>
-    <Pagination
-      {currentPage}
-      {totalPages}
-      prevUrl={`/contenido/videos/${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
-      nextUrl={`/contenido/videos/${currentPage + 1}/`}
-    />
-  </header>
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-    {paginatedPosts.map((videos) => {
-      const {link} = videos
-      const idVideo = link.replace("https://youtu.be/", "") 
-      return(
-          <a href={videos.link} target="_blank" class="mb-4">
-            <Image
-              class="aspect-video border border-zinc-700 rounded-xl object-cover"
-              src={`https://img.youtube.com/vi/${idVideo}/hqdefault.jpg`}
-              width={originalWidth}
-              height={newHeight}
-              alt="tumbvideo"
-            />
-            <div class="mt-3 text-sm font-bold line-clamp-2">
-              {videos.title}
-            </div>
-            <div class="text-left opacity-70 line-clamp-2">
-            </div>
-          </a>
-      )})}
-  </section>
+<header class="flex justify-between">
+  <a href="/contenido/articulos" class="bg-[#00538F] font-mplus pt-2 px-4 rounded-xl">
+    Ver articulos
+  </a>
   <Pagination
     {currentPage}
     {totalPages}
     prevUrl={`/contenido/videos/${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
     nextUrl={`/contenido/videos/${currentPage + 1}/`}
   />
-</ContentPost>
+</header>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+  {paginatedPosts.map((video: Video) => (
+    <CardVideos data={video}/>
+  ))}
+</section>
+<Pagination
+  {currentPage}
+  {totalPages}
+  prevUrl={`/contenido/videos/${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
+  nextUrl={`/contenido/videos/${currentPage + 1}/`}
+/>

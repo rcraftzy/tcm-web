@@ -9,3 +9,13 @@ export type Site = {
   postPerPage: number;
   scheduledPostMargin: number;
 };
+
+export type Video = {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+  published: string;
+  viewTime: string;
+  tags: string[];
+};
