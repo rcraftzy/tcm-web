@@ -1,13 +1,10 @@
-
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import ArticlePost from "../../../layouts/ArticlePost.astro"
+import { db, Videos } from "astro:db";
+import ContentPost from '../../../layouts/ContentPost.astro'
+import VideoPosts from "../../../layouts/VideoPosts.astro";
 import getSortedVideos from "../../../utils/getSortedVideos";
 import getPageNumbers from "../../../utils/getPageNumbers";
 import getPagination from "../../../utils/getPagination";
-import VideoPosts from "../../../layouts/VideoPosts.astro";
-import { db, Videos } from "astro:db";
-
 
 export async function getStaticPaths() {
   const videos = await db.select().from(Videos);
@@ -33,4 +30,6 @@ const pagination = getPagination({
 })
 
 ---
-<VideoPosts {...pagination} />
+<ContentPost content='Videos'>
+  <VideoPosts {...pagination} />
+</ContentPost>

@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
+import ContentPost from '../../../layouts/ContentPost.astro'
 import Articles from "../../../layouts/Articles.astro";
 import ArticlePost from "../../../layouts/ArticlePost.astro"
 import getSortedPosts from "../../../utils/getSortedPosts";
@@ -36,5 +37,14 @@ const pagination = getPagination({
   page: slug,
 });
 ---
-
-{post ? <ArticlePost post={post} /> : <Articles {...pagination} >}
+{
+  post 
+    ? 
+      <ContentPost content={post.data.title}>
+        <ArticlePost post={post} /> 
+      </ContentPost>
+    : 
+      <ContentPost content="Articulos">
+        <Articles {...pagination} >
+      </ContentPost>
+}

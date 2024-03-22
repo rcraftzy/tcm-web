@@ -9,8 +9,6 @@ export interface Props {
 const { href, frontmatter } = Astro.props
 const { title, pubDate, modDate, heroImage, description, tags, readingTime } = frontmatter;
 
-console.log(readingTime)
-
 let originalWidth = 300;
 let newHeight = Math.round((originalWidth * 9) / 16);
 ---

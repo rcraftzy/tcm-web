@@ -1,11 +1,5 @@
 ---
 import { type CollectionEntry } from 'astro:content';
-import Header from "../components/Header.astro"
-import Body from "../components/Body.astro"
-import BaseHead from "../components/BaseHead.astro"
-import Sidebar from "../components/Sidebar.astro"
-import {SITE_TITLE, SITE_DESCRIPTION} from "../config.ts"
-import ContentPost from '../layouts/ContentPost.astro'
 
 export interface props {
   posts: CollectionEntry<'blog'>;
@@ -15,10 +9,8 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 const { title, description, pubDate, updatedDate, heroImage } = post.data 
 ---
-<ContentPost>
-  <div class="mb-6">
-    <h1 class="text-4xl font-bold mb-6">{title}</h1>
-    <p class="font-bold opacity-70">{description}</p>
-  </div>
-  <Content />
-</ContentPost>
+<div class="mb-6">
+  <h1 class="text-4xl font-bold mb-6">{title}</h1>
+  <p class="font-bold opacity-70">{description}</p>
+</div>
+<Content />

@@ -1,8 +1,9 @@
 ---
 import { getCollection } from "astro:content";
+import ContentPost from '../../../layouts/ContentPost.astro'
+import Articles from "../../../layouts/Articles.astro";
 import getSortedPosts from "../../../utils/getSortedPosts";
 import getPagination from "../../../utils/getPagination";
-import Articles from "../../../layouts/Articles.astro";
 
 const posts = await getCollection("blog");
 
@@ -14,4 +15,6 @@ const pagination = getPagination({
   isIndex: true,
 });
 ---
-<Articles {...pagination} />
+<ContentPost content="Articulos">
+  <Articles {...pagination} />
+</ContentPost>
