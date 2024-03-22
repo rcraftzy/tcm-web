@@ -1,17 +1,34 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
+import ContentPost from '../../../layouts/ContentPost.astro'
 import ArticlePost from '../../layouts/ArticlePost.astro';
+import getSortedVideos from "../../../utils/getSortedVideos";
+import getPageNumbers from "../../../utils/getPageNumbers";
+import getPagination from "../../../utils/getPagination";
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.slug },
-		props: post,
-	}));
+  const videos = await db.select().from(Videos);
+  const postResult = videos.map(videos => ({
+    params: { slug: videos.id },
+    props: { videos },
+  }))
+
+  const pagePaths = getPageNumbers(videos.length).map(pageNum => ({
+    params: {slug: String(pageNum)}
+  }))
+
+  return [...postResult, ...pagePaths]
 }
-type Props = CollectionEntry<'blog'>;
 
-const post = Astro.props;
+const { slug } = Astro.params
+const videos = await db.select().from(Videos);
+const sortedPost = await getSortedVideos(videos)
+
+const pagination = getPagination({
+  posts: sortedPost,
+  page: slug,
+})
 ---
-
-<ArticlePost {...post} />
+<ContentPost content='Contenido'>
+  <AllContent {...pagination} />
+</ContentPost>

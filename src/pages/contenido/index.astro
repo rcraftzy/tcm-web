@@ -1,35 +1,20 @@
 ---
 import ContentPost from '../../layouts/ContentPost.astro'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../config.ts';
 import { getCollection } from 'astro:content';
+import getSortedPosts from '../../utils/getSortedPosts';
+import getPagination from "../../utils/getPagination";
+import AllContent from '../../layouts/AllContent.astro'
 
-import { Image } from 'astro:assets'
+const posts = await getCollection("blog");
 
-const posts = (await getCollection('blog')).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+const sortedPosts = await getSortedPosts(posts);
 
-let originalWidth = 300;
-let newHeight = Math.round((originalWidth * 9) / 16);
+const pagination = getPagination({
+  posts: sortedPosts,
+  page: 1,
+  isIndex: true,
+});
 ---
-<ContentPost>
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    {posts.map((post) => (
-        <a href={`/contenido/articulos/${post.slug}/`} class="mb-4">
-          <Image
-            class="aspect-video border border-zinc-700 rounded-xl object-cover"
-            src={post.data.heroImage}
-            width={originalWidth}
-            height={newHeight}
-            alt="tumbnail"
-          />
-          <div class="mt-2 text-base font-bold">
-            {post.data.title}
-          </div>
-          <div class="text-left opacity-70 text-sm line-clamp-3">
-            {post.data.description}
-          </div>
-        </a>
-      ))}
-  </section>
+<ContentPost content="Contenido">
+  <AllContent {...pagination} />
 </ContentPost>
