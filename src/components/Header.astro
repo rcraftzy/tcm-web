@@ -9,20 +9,19 @@ const height = width / aspectRatio
 <header class="fixed w-full py-2 backdrop-blur-xl z-20">
   <section class="max-w-4xl mx-auto">
     <div class="flex px-4">
-      <div>
+      <a href="/">
         <Image
           class="max-w-48 max-h-12 w-full object-cover" 
           src="/tcm-logo.webp" 
           width={width}
           height={height}
           alt="Logo Team cellmania">
-      </div>
+      </a>
       <span class="flex-1"></span>
-      <nav class="text-white flex flex-row gap-6">
-        <HeaderLink href={"/"}>Inicio</HeaderLink>
-        <HeaderLink href={"/social"}>Redes</HeaderLink>
+      <nav class="text-white flex flex-row gap-6 items-center">
         <HeaderLink href={"/contenido"}>Contenido</HeaderLink>
-        <HeaderLink href={"/tienda"}>Tienda</HeaderLink>
+        <HeaderLink href={"/social"}>Redes</HeaderLink>
+        <a href={"https://teamcellmania.com/products"} target="_blank">Tienda</a>
       </nav>
     </div>
   </section>
