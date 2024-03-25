@@ -1,10 +1,10 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
-import ContentPost from '../../../layouts/ContentPost.astro'
-import ArticlePost from '../../layouts/ArticlePost.astro';
-import getSortedVideos from "../../../utils/getSortedVideos";
-import getPageNumbers from "../../../utils/getPageNumbers";
-import getPagination from "../../../utils/getPagination";
+import ContentPost from '../../layouts/ContentPost.astro'
+import AllContent from '../../layouts/AllContent.astro'
+import getSortedVideos from "../../utils/getSortedVideos";
+import getPageNumbers from "../../utils/getPageNumbers";
+import getPagination from "../../utils/getPagination";
 
 export async function getStaticPaths() {
   const videos = await db.select().from(Videos);
