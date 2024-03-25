@@ -1,7 +1,6 @@
 ---
 import Header from "../components/Header.astro"
 import Body from "../components/Body.astro"
-import Sidebar from "../components/Sidebar.astro"
 import BaseHead from '../components/BaseHead.astro'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
 
@@ -19,17 +18,10 @@ const { content } = Astro.props
   </head>
   <Body>
     <Header />
-    <article class={`px-8 mx-auto max-w-3xl`}>
+    <article class={`px-8 mx-auto max-w-2xl`}>
       <main class="pt-20">
-        <section class="grid grid-cols-12 gap-4">
-          <div class="col-span-12 md:col-span-9">
-            <section>
-              <section>
-                <slot />
-              </section>
-            </section>
-          </div>
-          <Sidebar className="col-span-12 md:col-span-3 h-fit md:sticky top-20" />
+        <section>
+          <slot />
         </section>
       </main>
     </article>
