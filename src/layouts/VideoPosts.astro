@@ -21,7 +21,7 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props
     nextUrl={`/contenido/videos/${currentPage + 1}/`}
   />
 </header>
-<section class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+<section class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
   {paginatedPosts.map((video: Video) => (
     <CardVideos data={video}/>
   ))}

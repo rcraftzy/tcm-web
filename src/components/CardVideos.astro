@@ -11,7 +11,7 @@ const { link, title } = data
 
 const idVideo = link.replace("https://youtu.be/", "") 
 
-let originalWidth = 300;
+let originalWidth = 300*2;
 let newHeight = Math.round((originalWidth * 9) / 16);
 ---
 <a href={link} target="_blank" class="mb-4">
