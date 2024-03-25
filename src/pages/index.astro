@@ -15,41 +15,32 @@ const height = width / aspectRatio
 
 <html lang="en">
 	<head>
-    <BaseHead title={} description={} />
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
   <Body>
     <Header />
-    <main class="pt-[56px]">
-      <section class="relative mb-6 h-80 px-8 mx-auto max-w-4xl flex justify-center items-center">
-        <section class="grid grid-cols-9">
-          <aside class="col-span-3 ">
-            <h1 class="text-6xl font-bold">
-              Descubre 
-            </h1>
-            <span class="text-lg opacity-70">
-              Productos más recientes y las últimas ofertas en tecnología y figuras coleccionables
-            </span>
-            <button class="mt-5 bg-white px-8 py-2 text-lg text-black text-center font-bold rounded-2xl">
-              Explora Ahora
-            </button>
-          </aside>
-          <section class="col-span-6 ml-36">
-            <section class="grid grid-rows-2 grid-flow-col gap-4">
-              <div class="row-span-2">
-                <img src="/images/contents/Cambio-Tapa-2-300x212.png" alt="IT">
+    <main class="pt-[76px]">
+      <section>
+        <section class="mx-auto max-w-4xl flex justify-center md:justify-between gap-2 items-center p-4">
+          <div class="w-96">
+            <header class="flex flex-col gap-4">
+              <h1 class="font-semibold text-6xl text-center md:text-left">Soluciones Técnologicas a tu alcance</h1>
+              <article>
+                <p class="text-center md:text-left">Reparación y Venta de Celulares, Personalización y Mantenimiento de Computadoras</p>
+              </article>
+              <div class="mt-5">
+                <a href="/contenido" class="border-2 border-blue-900 font-semibold bg-blue-900 px-5 py-3 rounded-2xl mr-4">Ver contenido</a>
+                <a href="https://teamcellmania.com/products" target="_blank" class="font-semibold border-2 px-6 py-3 rounded-2xl border-blue-900">Visita nuestra tienda</a>
               </div>
-              <div class="col-span-2">
-                <img src="images/masthead/carousel-2.jpg" alt="IT">
-              </div>
-              <div class="col-span-2">
-                <img src="images/masthead/carousel-1.jpg" alt="IT">
-              </div>
-            </section>
-          </section>
+            </header>
+          </div>
+          <div class="bg-white w-[328px] h-[568px] rounded-3xl md:inline hidden">
+          </div>
         </section>
       </section>
-      <Content>
-      </Content>
+      <section class="">
+
+      </section>
     </main>
   </Body>
 </html>
