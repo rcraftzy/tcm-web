@@ -1,33 +1,40 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection } from "astro:content";
 import ContentPost from '../../layouts/ContentPost.astro'
-import AllContent from '../../layouts/AllContent.astro'
-import getSortedVideos from "../../utils/getSortedVideos";
+import getSortedPosts from "../../utils/getSortedPosts";
 import getPageNumbers from "../../utils/getPageNumbers";
 import getPagination from "../../utils/getPagination";
+import getPostsWithRT from "../../utils/getPostsWithRT";
+import AllContent from "../../layouts/AllContent.astro"
 
-export async function getStaticPaths() {
-  const videos = await db.select().from(Videos);
-  const postResult = videos.map(videos => ({
-    params: { slug: videos.id },
-    props: { videos },
-  }))
-
-  const pagePaths = getPageNumbers(videos.length).map(pageNum => ({
-    params: {slug: String(pageNum)}
-  }))
-
-  return [...postResult, ...pagePaths]
+export interface props {
+  post: CollectionEntry<'blog'>;
 }
 
-const { slug } = Astro.params
-const videos = await db.select().from(Videos);
-const sortedPost = await getSortedVideos(videos)
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const postResult = posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+
+  const pagePaths = getPageNumbers(posts.length).map(pageNum => ({
+    params: { slug: String(pageNum) },
+  }));
+
+  return [...postResult, ...pagePaths ];
+}
+
+const { post } = Astro.props;
+
+const { slug } = Astro.params;
+const posts = await getCollection("blog");
+const sortedPosts = await getSortedPosts(posts);
 
 const pagination = getPagination({
-  posts: sortedPost,
+  posts: sortedPosts,
   page: slug,
-})
+});
 ---
 <ContentPost content='Contenido'>
   <AllContent {...pagination} />
