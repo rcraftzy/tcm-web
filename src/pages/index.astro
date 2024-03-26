@@ -6,6 +6,7 @@ import Content from "../components/Content.astro"
 import Sidebar from "../components/Sidebar.astro"
 import BaseHead from "../components/BaseHead.astro"
 import Footer from "../components/Footer.astro"
+import StoriesItem from "../components/StoriesItem.astro"
 import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_URL } from '../config'
 import { Image } from 'astro:assets'
 
@@ -24,9 +25,15 @@ const height = width / aspectRatio
     <main class="pt-[76px]">
       <section>
         <section class="mx-auto max-w-4xl flex justify-center md:justify-between gap-2 items-center p-4">
+
           <div class="w-96">
+            <section class="inline md:hidden">
+              <div class="flex justify-center gap-5 mb-16">
+                <StoriesItem />
+              </div>
+            </section>
             <header class="flex flex-col gap-4">
-              <h1 class="font-semibold text-6xl text-center md:text-left">Soluciones Técnologicas a tu alcance</h1>
+              <h1 class="font-medium text-6xl text-center md:text-left">Soluciones Técnologicas a tu alcance</h1>
               <article>
                 <p class="text-center md:text-left">Reparación y Venta de Celulares, Personalización y Mantenimiento de Computadoras</p>
               </article>
