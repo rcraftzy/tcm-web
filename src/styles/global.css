@@ -17,4 +17,26 @@ blockquote {
   background-color: red;
 }
 
+html {
+  overflow-y: scroll;
+}
 
+/* width */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #f5f5f500;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #a5a5a580;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a5a5a5;
+}
