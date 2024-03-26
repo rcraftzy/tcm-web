@@ -1,14 +1,14 @@
 import type { Site } from './types'
 
 export const SITE_TITLE = "TeamCellmania"
-export const SITE_DESCRIPTION= "A curated list of the tech I use"
+export const SITE_DESCRIPTION= "Reparación y venta de celulares, personalizados, mantenimiento y reparación de computadoas en Cañar Azogues"
 export const HOMEPAGE_URL = "https://teamcellmania.com"
 
 export const SITE: Site = {
-  website: "https://teamcellmania.com", // replace this with your deployed domain
+  website: HOMEPAGE_URL, // replace this with your deployed domain
   author: "rcraftzy",
-  desc: "A curated list of the tech I use",
-  title: "TeamCellmania",
+  desc: SITE_DESCRIPTION,
+  title: SITE_TITLE,
   // ogImage: "astropaper-og.jpg",
   // lightAndDarkMode: true,
   postPerPage: 12,
