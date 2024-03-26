@@ -1,9 +1,11 @@
 ---
 import Header from "../components/Header.astro"
 import Body from "../components/Body.astro"
+import { VideoPlayer } from "../components/VideoPlayer.jsx"
 import Content from "../components/Content.astro"
 import Sidebar from "../components/Sidebar.astro"
 import BaseHead from "../components/BaseHead.astro"
+import Footer from "../components/Footer.astro"
 import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_URL } from '../config'
 import { Image } from 'astro:assets'
 
@@ -34,13 +36,14 @@ const height = width / aspectRatio
               </div>
             </header>
           </div>
-          <div class="bg-white w-[328px] h-[568px] rounded-3xl md:inline hidden">
+          <div class="relative bg-white w-[328px] h-[568px] rounded-3xl md:inline hidden">
+            <VideoPlayer client:only />
           </div>
         </section>
       </section>
-      <section class="">
-
+      <section class="mt-36">
       </section>
+      <Footer />
     </main>
   </Body>
 </html>
