@@ -7,6 +7,19 @@ body {
   overflow-wrap: break-word;
 }
 
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+
 ul {
   list-style: disc;
   padding-left: 1.5rem;
