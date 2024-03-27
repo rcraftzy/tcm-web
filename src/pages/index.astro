@@ -1,25 +1,36 @@
 ---
 import Header from "../components/Header.astro"
 import Body from "../components/Body.astro"
-import { VideoPlayer } from "../components/VideoPlayer.jsx"
+import { VideoPlayer, StoryContainer } from "../components/VideoPlayer.jsx"
 import Content from "../components/Content.astro"
 import Sidebar from "../components/Sidebar.astro"
 import BaseHead from "../components/BaseHead.astro"
 import Footer from "../components/Footer.astro"
 import StoriesItem from "../components/StoriesItem.astro"
+import ImagesStories from "../components/ImagesStories"
 import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_URL } from '../config'
 import { Image } from 'astro:assets'
+import getSortedPosts from "../utils/getSortedPosts"
+import Card from "../components/Card.astro"
+import { getCollection } from "astro:content"
+import { db, Videos } from "astro:db"
+import getSortedVideos from "../utils/getSortedVideos"
+import type { Video } from "../types"
+import CardVideos from "../components/CardVideos.astro"
 
-const aspectRatio = 2.8
-const width = 360 * 2
-const height = width / aspectRatio
+const posts = await getCollection("blog");
 
+
+const videos = await db.select().from(Videos);
+const sortedVideos = await getSortedVideos(videos)
+
+const sortedPosts = await getSortedPosts(posts);
 ---
 
 <html lang="en">
-	<head>
+  <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
+  </head>
   <Body>
     <Header />
     <main class="pt-[76px]">
@@ -38,17 +49,122 @@ const height = width / aspectRatio
                 <p class="text-center md:text-left">Reparación y Venta de Celulares, Personalización y Mantenimiento de Computadoras</p>
               </article>
               <div class="mt-5">
-                <a href="/contenido" class="border-2 border-blue-900 font-semibold bg-blue-900 px-5 py-2 rounded-2xl mr-4">Ver contenido</a>
-                <a href="https://teamcellmania.com/products" target="_blank" class="font-semibold border-2 px-5 py-2 rounded-2xl border-blue-900">Visita nuestra tienda</a>
+                <a href="/contenido" class="border-2 border-blue-900 font-semibold bg-blue-900 px-5 py-2 rounded-2xl mr-2">Ver contenido</a>
+                <a href="https://teamcellmania.com/products" target="_blank" class="font-semibold border-2 px-5 py-2 rounded-2xl border-blue-900">Ir a la tienda</a>
               </div>
             </header>
           </div>
-          <div class="relative bg-white w-[328px] h-[568px] rounded-3xl md:inline hidden">
-            <VideoPlayer client:only />
+          <div class="bg-black border-zinc-700 rounded-3xl md:inline hidden overflow-hidden">
+            <ImagesStories client:only />
           </div>
         </section>
       </section>
-      <section class="mt-36">
+      <section class="mt-36 mx-auto max-w-4xl p-4">
+        <h2 class="mb-14 text-center">Brindamos servicios profecionales</h1>
+          <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="mb-0">
+              <img
+                class="aspect-video border border-zinc-700 rounded-xl object-cover"
+                src='/images/nada/11.png'
+                width="300"
+                alt="tumbnail"
+              />
+              <div class="mt-2 text-md font-bold">
+                Repuestos originales para tus dispositivos
+              </div>
+              <div class="text-left opacity-70 text-sm mb-2 line-clamp-3">
+              </div>
+            </div>
+            <div class="mb-0">
+              <img
+                class="aspect-video border border-zinc-700 rounded-xl object-cover"
+                src='/images/nada/9-7.png'
+                width="300"
+                alt="tumbnail"
+              />
+              <div class="mt-2 text-md font-bold">
+                Mantenimiento y reparación de computadoras
+              </div>
+              <div class="text-left opacity-70 text-sm mb-2 line-clamp-3">
+              </div>
+            </div>
+            <div class="mb-0">
+              <img
+                class="aspect-video border border-zinc-700 rounded-xl object-cover"
+                src='/images/nada/10-0.png'
+                width="300"
+                alt="tumbnail"
+              />
+              <div class="mt-2 text-md font-bold">
+                Mantenimiento y reparación de consolas
+              </div>
+              <div class="text-left opacity-70 text-sm mb-2 line-clamp-3">
+              </div>
+            </div>
+            <div class="mb-0">
+              <img
+                class="aspect-video border border-zinc-700 rounded-xl object-cover"
+                src='/images/nada/12.png'
+                width="300"
+                alt="tumbnail"
+              />
+              <div class="mt-2 text-md font-bold">
+                Mantenimiento y reparación de mandos de consolas
+              </div>
+              <div class="text-left opacity-70 text-sm mb-2 line-clamp-3">
+              </div>
+            </div>
+          </section>
+      </section>
+      <section class=" mx-auto max-w-4xl p-4">
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div
+            class="aspect-video flex flex-col justify-center border border-zinc-700 rounded-xl object-cover"
+          >
+            <h5 class="text-center font-bold text-4xl">11.000</h5>
+            <span class="text-center opacity-70">Ordenes de servicio</span>
+          </div>
+          <div
+            class="aspect-video flex flex-col justify-center border border-zinc-700 rounded-xl object-cover"
+          >
+            <h5 class="text-center font-bold text-4xl">338</h5>
+            <span class="text-center opacity-70">Tiktoks</span>
+          </div>
+          <div
+            class="aspect-video flex flex-col justify-center border border-zinc-700 rounded-xl object-cover"
+          >
+            <h5 class="text-center font-bold text-4xl">27</h5>
+            <span class="text-center opacity-70">Articulos</span>
+          </div>
+          <div
+            class="aspect-video flex flex-col justify-center border border-zinc-700 rounded-xl object-cover"
+          >
+            <h5 class="text-center font-bold text-4xl">117</h5>
+            <span class="text-center opacity-70">Videos</span>
+          </div>
+        </section>
+      </section>
+      <section class=" mx-auto max-w-4xl p-4 mt-8">
+        <header class="flex justify-between mb-6 items-center">
+          <h4 class="">Articulos</h4>
+          <a href="/contenido/videos" class="bg-blue-900 px-7 py-2 rounded-xl">Ver mas videos</a>
+        </header>
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {sortedVideos.map((video: Video, index:number) => index < 4 && (
+            <CardVideos data={video}/>
+          ))}
+        </section>
+      </section>
+      <section class=" mx-auto max-w-4xl p-4 mt-4">
+        <header class="flex justify-between mb-6 items-center">
+          <h4 class="">Articulos</h4>
+          <a href="/contenido/articulos" class="bg-blue-900 px-7 py-2 rounded-xl">Ver mas articulos</a>
+        </header>
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {sortedPosts.map((data, index) => index < 4 && (
+            <Card href={`/contenido/articulos/${data.slug}`} frontmatter={data.data} />
+          ))}
+        </section>
       </section>
       <Footer />
     </main>
