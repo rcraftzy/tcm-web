@@ -16,8 +16,10 @@ let newHeight = Math.round((originalWidth * 9) / 16);
   <Image
     class="aspect-video border border-zinc-700 rounded-xl object-cover"
     src={heroImage ? heroImage : '/images/contents/197.png'}
-    width={originalWidth}
-    height={newHeight}
+    width={300}
+    height={169}
+    loading="eager"
+    decoding="sync"
     alt="tumbnail"
   />
   <div class="mt-2 text-md font-bold">

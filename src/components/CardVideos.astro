@@ -20,6 +20,8 @@ let newHeight = Math.round((originalWidth * 9) / 16);
     src={`https://img.youtube.com/vi/${idVideo}/hqdefault.jpg`}
     width={originalWidth}
     height={newHeight}
+    loading="eager"
+    decoding="sync"
     alt="tumbvideo"
   />
   <div class="mt-3 text-sm font-bold line-clamp-2">
