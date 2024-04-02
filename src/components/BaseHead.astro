@@ -23,6 +23,9 @@ const { title, description, image = '/cover.jpg' } = Astro.props
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
+<!-- ViewTransitions  -->
+<ViewTransitions />
+
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
@@ -36,4 +39,3 @@ const { title, description, image = '/cover.jpg' } = Astro.props
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
-<ViewTransitions />

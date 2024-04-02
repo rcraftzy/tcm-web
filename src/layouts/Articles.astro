@@ -20,9 +20,9 @@ const { currentPage, totalPages, paginatedPosts} = Astro.props;
     nextUrl={`/contenido/articulos/${currentPage + 1}/`}
   />
 </header>
-<section class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-  {paginatedPosts.map(data => (
-    <Card href={`/contenido/articulos/${data.slug}`} frontmatter={data.data} />
+<section class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 group">
+  {paginatedPosts.map((data, index) => (
+    <Card href={`/contenido/articulos/${data.slug}`} frontmatter={data.data} loading={index < 6 ? "eager" : "lazy"} />
   ))}
 </section>
 <Pagination

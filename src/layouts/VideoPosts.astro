@@ -21,9 +21,9 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props
     nextUrl={`/contenido/videos/${currentPage + 1}/`}
   />
 </header>
-<section class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-  {paginatedPosts.map((video: Video) => (
-    <CardVideos data={video}/>
+<section class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 group">
+  {paginatedPosts.map((video: Video, index: number) => (
+    <CardVideos data={video} loading={index < 9 ? "eager" : "lazy"}/>
   ))}
 </section>
 <Pagination

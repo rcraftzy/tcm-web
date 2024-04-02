@@ -4,21 +4,22 @@ import { Image } from "astro:assets";
 
 export interface Props {
   href?: string;
+  loading?: string;
   frontmatter: CollectionEntry<"blog">["data"];
 }
-const { href, frontmatter } = Astro.props
+const { href, frontmatter, loading = "" } = Astro.props
 const { title, pubDate, modDate, heroImage, description, tags, readingTime } = frontmatter;
 
-let originalWidth = 300*2;
-let newHeight = Math.round((originalWidth * 9) / 16);
+let width = 300*2;
+let height = Math.round((width * 9) / 16);
 ---
-<a href={href} class="mb-4">
+<a href={href} class="mb-4 group-hover:opacity-60 hover:!opacity-100 transition-opacity">
   <Image
     class="aspect-video border border-zinc-700 rounded-xl object-cover"
     src={heroImage ? heroImage : '/images/contents/197.png'}
-    width={300}
-    height={169}
-    loading="eager"
+    width={width}
+    height={height}
+    loading={loading}
     decoding="sync"
     alt="tumbnail"
   />

@@ -17,6 +17,7 @@ import { db, Videos } from "astro:db"
 import getSortedVideos from "../utils/getSortedVideos"
 import type { Video } from "../types"
 import CardVideos from "../components/CardVideos.astro"
+import { InstaStories } from "../components/InstaStories"
 
 const posts = await getCollection("blog");
 
@@ -27,17 +28,16 @@ const sortedVideos = await getSortedVideos(videos)
 const sortedPosts = await getSortedPosts(posts);
 ---
 
-<html lang="en">
+<html lang="es" class="scroll-smooth">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <Body>
     <Header />
-    <main class="pt-[76px]">
-      <section>
+    <main class="pt-[76px]" >
+      <section class="h-700px">
         <section class="mx-auto max-w-4xl flex justify-center md:justify-between gap-2 items-center p-4">
-
-          <div class="w-96">
+          <div class="w-[]">
             <section class="inline md:hidden">
               <div class="flex justify-center gap-5 mb-16">
                 <StoriesItem />
@@ -54,7 +54,7 @@ const sortedPosts = await getSortedPosts(posts);
               </div>
             </header>
           </div>
-          <div class="bg-black border-zinc-700 rounded-3xl md:inline hidden overflow-hidden">
+          <div class="border border-zinc-700 rounded-3xl md:inline hidden aspect-[9/16]" transition:animate="slide" >
             <ImagesStories client:only />
           </div>
         </section>
@@ -63,10 +63,11 @@ const sortedPosts = await getSortedPosts(posts);
         <h2 class="mb-14 text-center">Brindamos servicios profecionales</h1>
           <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="mb-0">
-              <img
+              <Image
                 class="aspect-video border border-zinc-700 rounded-xl object-cover"
                 src='/images/nada/11.png'
-                width="300"
+                width={288*2}
+                height={144}
                 alt="tumbnail"
               />
               <div class="mt-2 text-md font-bold">
@@ -76,10 +77,11 @@ const sortedPosts = await getSortedPosts(posts);
               </div>
             </div>
             <div class="mb-0">
-              <img
+              <Image
                 class="aspect-video border border-zinc-700 rounded-xl object-cover"
                 src='/images/nada/9-7.png'
-                width="300"
+                width={288*2}
+                height={144}
                 alt="tumbnail"
               />
               <div class="mt-2 text-md font-bold">
@@ -89,10 +91,11 @@ const sortedPosts = await getSortedPosts(posts);
               </div>
             </div>
             <div class="mb-0">
-              <img
+              <Image
                 class="aspect-video border border-zinc-700 rounded-xl object-cover"
                 src='/images/nada/10-0.png'
-                width="300"
+                width={288*2}
+                height={144}
                 alt="tumbnail"
               />
               <div class="mt-2 text-md font-bold">
@@ -102,10 +105,11 @@ const sortedPosts = await getSortedPosts(posts);
               </div>
             </div>
             <div class="mb-0">
-              <img
+              <Image
                 class="aspect-video border border-zinc-700 rounded-xl object-cover"
                 src='/images/nada/12.png'
-                width="300"
+                width={288*2}
+                height={144}
                 alt="tumbnail"
               />
               <div class="mt-2 text-md font-bold">
@@ -151,7 +155,7 @@ const sortedPosts = await getSortedPosts(posts);
         </header>
         <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
           {sortedVideos.map((video: Video, index:number) => index < 4 && (
-            <CardVideos data={video}/>
+            <CardVideos data={video} loading="lazy"/>
           ))}
         </section>
       </section>
@@ -162,7 +166,7 @@ const sortedPosts = await getSortedPosts(posts);
         </header>
         <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
           {sortedPosts.map((data, index) => index < 4 && (
-            <Card href={`/contenido/articulos/${data.slug}`} frontmatter={data.data} />
+            <Card href={`/contenido/articulos/${data.slug}`} frontmatter={data.data} loading="lazy" />
           ))}
         </section>
       </section>

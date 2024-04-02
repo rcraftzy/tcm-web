@@ -4,9 +4,10 @@ import type { Video } from "../types"
 
 export interface Props {
   data: Video
+  loading?: string
 }
 
-const { data } = Astro.props
+const { data, loading } = Astro.props
 const { link, title } = data
 
 const idVideo = link.replace("https://youtu.be/", "") 
@@ -14,13 +15,13 @@ const idVideo = link.replace("https://youtu.be/", "")
 let originalWidth = 300*2;
 let newHeight = Math.round((originalWidth * 9) / 16);
 ---
-<a href={link} target="_blank" class="mb-4">
+<a href={link} target="_blank" class="mb-4 group-hover:opacity-60 hover:!opacity-100 transition-opacity">
   <Image
     class="aspect-video border border-zinc-700 rounded-xl object-cover"
     src={`https://img.youtube.com/vi/${idVideo}/hqdefault.jpg`}
     width={originalWidth}
     height={newHeight}
-    loading="eager"
+    loading={loading}
     decoding="sync"
     alt="tumbvideo"
   />
