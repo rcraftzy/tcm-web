@@ -87,12 +87,5 @@ html {
 @layer components{
   .btn {
     @apply inline-flex gap-2 rounded-2xl px-5 py-2 outline-offset-4 transition-all duration-300 hover:-translate-y-0.5 hover:bg-opacity-90 hover:shadow-md disabled:pointer-events-none disabled:opacity-50 disabled:grayscale;
-
-    &-icon {
-      @apply px-2;
-    }
-    &-absolute {
-      @apply absolute;
-    }
   }
 }
