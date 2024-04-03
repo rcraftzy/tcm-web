@@ -35,7 +35,7 @@ const sortedPosts = await getSortedPosts(posts);
   </head>
   <Body>
     <Header />
-    <main class="pt-[76px]" >
+    <main class="pt-[76px]">
       <section class="h-700px">
         <section class="mx-auto max-w-4xl flex justify-center md:justify-between gap-2 items-center p-4">
           <div class="w-[]">
@@ -144,7 +144,9 @@ const sortedPosts = await getSortedPosts(posts);
           <div
             class="aspect-video flex flex-col justify-center border border-zinc-700 rounded-xl object-cover"
           >
-            <h5 class="text-center font-bold text-4xl">27</h5>
+            <h5 class="text-center font-bold text-4xl">
+              {sortedPosts.length}
+            </h5>
             <span class="text-center opacity-70">Articulos</span>
           </div>
           <div
@@ -155,19 +157,17 @@ const sortedPosts = await getSortedPosts(posts);
           </div>
         </section>
       </section>
-      <section class=" mx-auto max-w-4xl p-4 mt-8">
-        <header class="flex justify-between mb-6 items-center">
-          <h4 class="">Articulos</h4>
-          <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
-            <Button href={"contenido/videos"} className="bg-blue-900">
-              Más videos
-            </Button>
-          </div>
-        </header>
-        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 group">
-          {sortedVideos.map((video: Video, index:number) => index < 4 && (
-            <CardVideos data={video} loading="lazy"/>
-          ))}
+      <section class="mx-auto max-w-4xl p-4 mt-4">
+        <section class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-56">
+          <header class="mb-6 items-center sticky top-0">
+            <h2 class="leading-none font-bold mb-6">Revisa nuestros articulos</h2>
+            <p class="text-xl opacity-70">¡Conoce más y mantén tus dispositivos en perfecto estado!"</p>
+          </header>
+          <section class="grid grid-cols-1 gap-4 group">
+            {sortedPosts.map((data, index) => index < 3 && (
+              <Card href={`/contenido/articulos/${data.slug}`} frontmatter={data.data} loading="lazy" />
+            ))}
+          </section>
         </section>
       </section>
       <section class="bg-gray-900 py-8">
@@ -192,18 +192,18 @@ const sortedPosts = await getSortedPosts(posts);
           </section>
         </section>
       </section>
-      <section class=" mx-auto max-w-4xl p-4 mt-4">
+      <section class=" mx-auto max-w-4xl p-4 mt-8">
         <header class="flex justify-between mb-6 items-center">
           <h4 class="">Articulos</h4>
           <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
             <Button href={"contenido/videos"} className="bg-blue-900">
-              Más articulos
+              Más videos
             </Button>
           </div>
         </header>
         <section class="grid grid-cols-2 md:grid-cols-4 gap-4 group">
-          {sortedPosts.map((data, index) => index < 4 && (
-            <Card href={`/contenido/articulos/${data.slug}`} frontmatter={data.data} loading="lazy" />
+          {sortedVideos.map((video: Video, index:number) => index < 4 && (
+            <CardVideos data={video} loading="lazy"/>
           ))}
         </section>
       </section>
