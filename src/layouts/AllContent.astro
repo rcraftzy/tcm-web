@@ -1,6 +1,7 @@
 ---
 import Card from '../components/Card.astro';
 import Pagination from '../components/Pagination.astro';
+import Button from '../components/Button.astro';
 import type { CollectionEntry } from 'astro:content';
 import type { Video } from '../types';
 
@@ -13,7 +14,11 @@ export interface Props {
 const { currentPage, totalPages, paginatedPosts } = Astro.props;
 ---
 <header class="flex justify-between">
-  <a href="/contenido/videos" class="bg-[#00538F] font-bold pt-2 px-4 rounded-xl">Ver videos</a>
+  <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
+    <Button href={"/contenido/videos"} className="bg-blue-900">
+      Ver videos
+    </Button>
+  </div>
   <Pagination
     currentPage={currentPage}
     totalPages={totalPages}

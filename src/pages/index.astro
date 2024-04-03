@@ -18,6 +18,7 @@ import getSortedVideos from "../utils/getSortedVideos"
 import type { Video } from "../types"
 import CardVideos from "../components/CardVideos.astro"
 import { InstaStories } from "../components/InstaStories"
+import Button from "../components/Button.astro"
 
 const posts = await getCollection("blog");
 
@@ -49,8 +50,14 @@ const sortedPosts = await getSortedPosts(posts);
                 <p class="text-center md:text-left">Reparación y Venta de Celulares, Personalización y Mantenimiento de Computadoras</p>
               </article>
               <div class="mt-5">
-                <a href="/contenido" class="border-2 border-blue-900 font-semibold bg-blue-900 px-5 py-2 rounded-2xl mr-2">Ver contenido</a>
-                <a href="https://teamcellmania.com/products" target="_blank" class="font-semibold border-2 px-5 py-2 rounded-2xl border-blue-900">Ir a la tienda</a>
+                <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
+                  <Button href={"/contenido"} className="bg-blue-900">
+                    Ver contenido
+                  </Button>
+                </div>
+                <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
+                  <a href="https://teamcellmania.com/products" target="_blank" class="btn bg-green-700 m-2">Ir a la tienda</a>
+                </div>
               </div>
             </header>
           </div>
@@ -151,9 +158,13 @@ const sortedPosts = await getSortedPosts(posts);
       <section class=" mx-auto max-w-4xl p-4 mt-8">
         <header class="flex justify-between mb-6 items-center">
           <h4 class="">Articulos</h4>
-          <a href="/contenido/videos" class="bg-blue-900 px-7 py-2 rounded-xl">Ver mas videos</a>
+          <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
+            <Button href={"contenido/videos"} className="bg-blue-900">
+              Más videos
+            </Button>
+          </div>
         </header>
-        <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 group">
           {sortedVideos.map((video: Video, index:number) => index < 4 && (
             <CardVideos data={video} loading="lazy"/>
           ))}
@@ -162,9 +173,13 @@ const sortedPosts = await getSortedPosts(posts);
       <section class=" mx-auto max-w-4xl p-4 mt-4">
         <header class="flex justify-between mb-6 items-center">
           <h4 class="">Articulos</h4>
-          <a href="/contenido/articulos" class="bg-blue-900 px-7 py-2 rounded-xl">Ver mas articulos</a>
+          <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
+            <Button href={"contenido/videos"} className="bg-blue-900">
+              Más articulos
+            </Button>
+          </div>
         </header>
-        <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 group">
           {sortedPosts.map((data, index) => index < 4 && (
             <Card href={`/contenido/articulos/${data.slug}`} frontmatter={data.data} loading="lazy" />
           ))}

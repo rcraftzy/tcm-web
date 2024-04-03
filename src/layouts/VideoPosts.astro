@@ -1,4 +1,5 @@
 ---
+import Button from '../components/Button.astro';
 import CardVideos from '../components/CardVideos.astro';
 import Pagination from '../components/Pagination.astro';
 import type { Video } from "../types"
@@ -11,9 +12,11 @@ export interface Prosp {
 const { currentPage, totalPages, paginatedPosts } = Astro.props
 ---
 <header class="flex justify-between">
-  <a href="/contenido/articulos" class="bg-[#00538F] font-bold pt-2 px-4 rounded-xl">
-    Ver articulos
-  </a>
+  <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
+    <Button href={"/contenido/articulos"} className="bg-blue-900">
+      Ver articulos
+    </Button>
+  </div>
   <Pagination
     {currentPage}
     {totalPages}
