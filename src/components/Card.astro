@@ -6,14 +6,15 @@ export interface Props {
   href?: string;
   loading?: string;
   frontmatter: CollectionEntry<"blog">["data"];
+  className?: string
 }
-const { href, frontmatter, loading = "" } = Astro.props
+const { href, frontmatter, loading = "", className = "" } = Astro.props
 const { title, pubDate, modDate, heroImage, description, tags, readingTime } = frontmatter;
 
 let width = 300*2;
 let height = Math.round((width * 9) / 16);
 ---
-<a href={href} class="mb-4 group-hover:opacity-60 hover:!opacity-100 transition-opacity">
+<a href={href} class={`mb-4 group-hover:opacity-60 hover:!opacity-100 transition-opacity ${className}`}>
   <Image
     class="aspect-video border border-zinc-700 rounded-xl object-cover"
     src={heroImage ? heroImage : '/images/contents/197.png'}
