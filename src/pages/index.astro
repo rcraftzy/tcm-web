@@ -20,6 +20,7 @@ import CardVideos from "../components/CardVideos.astro"
 import { InstaStories } from "../components/InstaStories"
 import Button from "../components/Button.astro"
 import ArticleIcon from "../components/Icons/ArticleIcon.astro"
+import VideoIcon from "../components/Icons/VideoIcon.astro"
 
 const posts = await getCollection("blog");
 
@@ -176,7 +177,7 @@ const sortedPosts = await getSortedPosts(posts);
                 ))}
               </section>
               <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex justify-end flex-wrap gap-4 mb-6">
-                <Button href={"contenido/videos"} className="bg-blue-900 items-center">
+                <Button href={"/contenido/articulos"} className="bg-blue-900 items-center">
                   <div class="w-6 fill-zinc-300">
                     <ArticleIcon />
                   </div>
@@ -211,8 +212,15 @@ const sortedPosts = await getSortedPosts(posts);
       </section>
       <section class=" mx-auto max-w-4xl p-4 mt-8">
         <header class="flex justify-between mb-6 items-center">
-          <h4 class="">Articulos</h4>
-          
+          <h4 class="">Videos</h4>
+          <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex justify-end flex-wrap gap-4">
+            <Button href={"contenido/videos"} className="bg-blue-900 items-center">
+              <div class="w-6 stroke-white fill-none">
+                <VideoIcon />
+              </div>
+              <span>Ver mas videos</span>
+            </Button>
+          </div>
         </header>
         <section class="grid grid-cols-2 md:grid-cols-4 gap-4 group">
           {sortedVideos.map((video: Video, index:number) => index < 4 && (
