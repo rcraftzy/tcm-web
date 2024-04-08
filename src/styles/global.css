@@ -66,21 +66,17 @@ html {
   .fade-in {
     transition: opacity 0.5s var(--animation-delay, 0ms);
   }
-  .is-inactive {
-    &.fade-up,
-    .fade-up {
-      @apply scale-95;
-    }
+  .is-inactive.fade-up,
+  .fade-up {
+    @apply scale-95;
   }
-  .out-of-screen {
-    &.fade-up,
-    .fade-up {
-      @apply scale-95 opacity-90;
-    }
-    &.fade-in,
-    .fade-in {
-      @apply opacity-0;
-    }
+  .out-of-screen.fade-up,
+  .fade-up {
+    @apply scale-95 opacity-90;
+  }
+  .out-of-screen.fade-in,
+  .fade-in {
+    opacity: 0;
   }
 }
 
