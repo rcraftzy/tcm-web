@@ -10,7 +10,7 @@ export type Site = {
   scheduledPostMargin: number;
 };
 
-export type Video = {
+export type VideoYoutube = {
   id: string;
   title: string;
   description: string;
@@ -19,3 +19,16 @@ export type Video = {
   viewTime: string;
   tags: string[];
 };
+
+export type Image = string;
+export type Video = string;
+export type Component = React.ReactNode;
+
+export interface Story {
+	type: Image | Video | Component;
+	url: string;
+	duration?: number;
+  thumbnail?: string,
+}
+
+
