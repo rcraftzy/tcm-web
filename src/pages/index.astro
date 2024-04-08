@@ -15,15 +15,15 @@ import Card from "../components/Card.astro"
 import { getCollection } from "astro:content"
 import { db, Videos } from "astro:db"
 import getSortedVideos from "../utils/getSortedVideos"
-import type { Video } from "../types"
+import type { Story, Video } from "../types"
 import CardVideos from "../components/CardVideos.astro"
 import { InstaStories } from "../components/InstaStories"
 import Button from "../components/Button.astro"
 import ArticleIcon from "../components/Icons/ArticleIcon.astro"
 import VideoIcon from "../components/Icons/VideoIcon.astro"
+import Masthead from "../components/Masthead.astro"
 
 const posts = await getCollection("blog");
-
 
 const videos = await db.select().from(Videos);
 const sortedVideos = await getSortedVideos(videos)
@@ -38,36 +38,7 @@ const sortedPosts = await getSortedPosts(posts);
   <Body>
     <Header />
     <main class="pt-[76px]">
-      <section class="h-700px">
-        <section class="mx-auto max-w-4xl flex justify-center md:justify-between gap-2 items-center p-4">
-          <div class="w-[]">
-            <section class="inline md:hidden">
-              <div class="flex justify-center gap-5 mb-16">
-                <StoriesItem />
-              </div>
-            </section>
-            <header class="flex flex-col gap-4">
-              <h1 class="font-medium text-6xl text-center md:text-left">Soluciones Técnologicas a tu alcance</h1>
-              <article>
-                <p class="text-center md:text-left">Reparación y Venta de Celulares, Personalización y Mantenimiento de Computadoras</p>
-              </article>
-              <div class="mt-5">
-                <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
-                  <Button href={"/contenido"} className="bg-blue-900">
-                    Ver contenido
-                  </Button>
-                </div>
-                <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
-                  <a href="https://teamcellmania.com/products" target="_blank" class="btn bg-green-700 m-2">Ir a la tienda</a>
-                </div>
-              </div>
-            </header>
-          </div>
-          <div class="border border-zinc-700 rounded-3xl md:inline hidden aspect-[9/16]" transition:animate="slide" >
-            <ImagesStories client:only />
-          </div>
-        </section>
-      </section>
+      <Masthead />
       <section class="mt-36 mx-auto max-w-4xl p-4">
         <h2 class="mb-14 text-center">Brindamos servicios profecionales</h1>
           <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -159,7 +130,7 @@ const sortedPosts = await getSortedPosts(posts);
           </div>
         </section>
       </section>
-      <section class="bg-slate-950 py-12">
+      <section class="bg-[#181b1b] py-12">
         <section class="mx-auto max-w-4xl p-4 my-4">
           <section class="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-56">
             <div>
@@ -188,7 +159,7 @@ const sortedPosts = await getSortedPosts(posts);
           </section>
         </section>
       </section>
-      <section class="bg-gray-900 py-8">
+      <section class="bg-[#1b181f] py-8">
         <section class="grid grid-cols-1 md:grid-cols-3 mx-auto max-w-4xl">
           <div class="col-span-2 mr-6">
             <Image src="/images/nada/Mando-4-1-600x600.png" width={600} height={600} alt="mando"/>
