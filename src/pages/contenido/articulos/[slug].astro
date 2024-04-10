@@ -6,7 +6,6 @@ import ArticlePost from "../../../layouts/ArticlePost.astro"
 import getSortedPosts from "../../../utils/getSortedPosts";
 import getPageNumbers from "../../../utils/getPageNumbers";
 import getPagination from "../../../utils/getPagination";
-import getPostsWithRT from "../../../utils/getPostsWithRT";
 
 export interface props {
   post: CollectionEntry<'blog'>;
@@ -41,7 +40,7 @@ const pagination = getPagination({
   post 
     ? 
       <ContentPost content={post.data.title}>
-        <ArticlePost post={post} /> 
+        <ArticlePost post={post} />
       </ContentPost>
     : 
       <ContentPost content="Articulos">
