@@ -1,4 +1,6 @@
-const getSortedVideos = (posts) => {
+import type { VideoYoutube } from "../types";
+
+const getSortedVideos = (posts: VideoYoutube[]) => {
   return posts
     .sort(
       (a, b) =>
