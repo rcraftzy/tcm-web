@@ -1,0 +1,35 @@
+---
+export interface Props {
+  href: string;
+  className?: string;
+  ariaLabel?: string;
+  title?: string;
+  disabled?: boolean;
+}
+
+const { href, className, ariaLabel, title, disabled = false } = Astro.props;
+---
+
+{
+  disabled ? (
+    <span
+      class={`group hidden ${className}`}
+      aria-label={ariaLabel}
+      title={title}
+      aria-disabled={disabled}
+    >
+      <slot />
+    </span>
+  ) : (
+      <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
+        <a
+          {href}
+          class={`inline-flex gap-2 rounded-2xl outline-offset-4 transition-all duration-300 hover:-translate-y-0.5 hover:bg-opacity-90 hover:shadow-md disabled:pointer-events-none disabled:opacity-50 disabled:grayscale px-0 py-0 group ${className}`}
+          aria-label={ariaLabel}
+          title={title}
+        >
+          <slot />
+        </a>
+      </div>
+  )
+}

@@ -1,0 +1,35 @@
+---
+import { db, Videos } from "astro:db";
+import ContentPost from '../../../layouts/ContentPost.astro'
+import VideoPosts from "../../../layouts/VideoPosts.astro";
+import getSortedVideos from "../../../utils/getSortedVideos";
+import getPageNumbers from "../../../utils/getPageNumbers";
+import getPagination from "../../../utils/getPagination";
+
+export async function getStaticPaths() {
+  const videos = await db.select().from(Videos);
+  const postResult = videos.map(videos => ({
+    params: { slug: videos.id },
+    props: { videos },
+  }))
+
+  const pagePaths = getPageNumbers(videos.length).map(pageNum => ({
+    params: {slug: String(pageNum)}
+  }))
+
+  return [...postResult, ...pagePaths]
+}
+
+const { slug } = Astro.params
+const videos = await db.select().from(Videos);
+const sortedPost = await getSortedVideos(videos)
+
+const pagination = getPagination({
+  posts: sortedPost,
+  page: slug,
+})
+
+---
+<ContentPost content='Videos'>
+  <VideoPosts {...pagination} />
+</ContentPost>

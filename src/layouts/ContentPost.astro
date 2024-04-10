@@ -1,0 +1,30 @@
+---
+import Header from "../components/Header.astro"
+import Body from "../components/Body.astro"
+import BaseHead from '../components/BaseHead.astro'
+import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
+
+export interface Props {
+  content: string
+}
+
+const { content } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <BaseHead title={content+` | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Header />
+    <article class={`px-8 mx-auto max-w-2xl`}>
+      <main class="pt-20">
+        <section>
+          <slot />
+        </section>
+      </main>
+    </article>
+  </Body>
+</html>
+

@@ -1,0 +1,50 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import ContentPost from '../../../layouts/ContentPost.astro'
+import Articles from "../../../layouts/Articles.astro";
+import ArticlePost from "../../../layouts/ArticlePost.astro"
+import getSortedPosts from "../../../utils/getSortedPosts";
+import getPageNumbers from "../../../utils/getPageNumbers";
+import getPagination from "../../../utils/getPagination";
+import getPostsWithRT from "../../../utils/getPostsWithRT";
+
+export interface props {
+  post: CollectionEntry<'blog'>;
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const postResult = posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+
+  const pagePaths = getPageNumbers(posts.length).map(pageNum => ({
+    params: { slug: String(pageNum) },
+  }));
+
+  return [...postResult, ...pagePaths ];
+}
+
+const { post } = Astro.props;
+
+const { slug } = Astro.params;
+const posts = await getCollection("blog");
+const sortedPosts = await getSortedPosts(posts);
+
+const pagination = getPagination({
+  posts: sortedPosts,
+  page: slug,
+});
+---
+{
+  post 
+    ? 
+      <ContentPost content={post.data.title}>
+        <ArticlePost post={post} /> 
+      </ContentPost>
+    : 
+      <ContentPost content="Articulos">
+        <Articles {...pagination} >
+      </ContentPost>
+}

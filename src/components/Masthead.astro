@@ -1,0 +1,57 @@
+---
+import Button from "./Button.astro";
+import ImagesStories from "./ImagesStories";
+import StoriesItem from "./StoriesItem.astro";
+
+const stories = [
+  {
+    type: 'video',
+    duration: 26000,
+    url: '/videos/xiaomi-unboxing.mp4',
+    thumbnail: "/images/stories/thumbnail1.png",
+  },
+  {
+    type: 'video',
+    url: '/videos/troca.mp4',
+    duration: 5000,
+    thumbnail: "/images/stories/thumbnail2.png",
+  },
+  {
+    type: 'video',
+    url: '/videos/download.mp4',
+    thumbnail: "/images/stories/thumbnail3.png",
+  },
+];
+---
+<section class="h-700px">
+  <section class="mx-auto max-w-4xl flex justify-center md:justify-between gap-2 items-center p-4">
+    <div class="w-[400px]">
+      <section class="inline md:hidden">
+        <div class="flex justify-center gap-5 mb-16">
+          {stories.map((story, index) => (
+            <StoriesItem story={story} index={index} />
+          ))}
+        </div>
+      </section>
+      <header class="flex flex-col gap-4">
+        <h1 class="font-medium text-6xl text-center md:text-left">Soluciones técnologicas a tu alcance</h1>
+        <article>
+          <p class="text-center md:text-left">Reparación y Venta de Celulares, Personalización y Mantenimiento de Computadoras</p>
+        </article>
+        <div class="mt-5 flex justify-center md:justify-start">
+          <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
+            <Button href={"/contenido"} className="bg-blue-900">
+              Ver contenido
+            </Button>
+          </div>
+          <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
+            <a href="https://teamcellmania.com/products" target="_blank" class="btn bg-green-700 m-2">Ir a la tienda</a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="w-[328px] h-[568px] border border-zinc-700 rounded-3xl md:inline hidden overflow-hidden" transition:animate="slide" >
+      <ImagesStories stories={stories} index={0} client:load />
+    </div>
+  </section>
+</section>

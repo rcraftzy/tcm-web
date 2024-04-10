@@ -1,0 +1,10 @@
+---
+import { Image } from "astro:assets";
+
+const { story, index } = Astro.props
+---
+<div class="w-20 h-20 rounded-full bg-gradient-to-br from-[#06ccf4] via-[#0576bc] to-[#043863] p-0.5">
+  <a class="h-full w-full bg-zinc-900 rounded-full my-4" href={`/stories/${index}`}>
+    <Image src={story.thumbnail} width={80} height={80} loading="eager" decoding="sync" class="rounded-full border-2 border-zinc-900" alt="thumbnail">
+  </a>
+</div>

@@ -1,0 +1,21 @@
+---
+import ContentPost from '../../layouts/ContentPost.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../config.ts';
+import { getCollection } from 'astro:content';
+import ContentPages from '../../components/ContentPages.jsx'
+
+import { Image } from 'astro:assets'
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+
+const aspectRatio = 1.4157
+const width = 720 * 2
+const height = width / aspectRatio
+
+---
+
+<ContentPost>
+  <ContentPages client:load posts={posts} />
+</ContentPost>

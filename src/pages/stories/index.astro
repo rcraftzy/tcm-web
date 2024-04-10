@@ -1,0 +1,30 @@
+---
+import ImagesStories from "../../components/ImagesStories"
+
+const { index = 0 } = Astro.props
+
+const stories = [
+  {
+    type: 'video',
+    duration: 26000,
+    url: '/videos/xiaomi-unboxing.mp4',
+    thumbnail: "/images/banner1.png",
+  },
+  {
+    type: 'video',
+    url: '/videos/troca.mp4',
+    duration: 5000,
+    thumbnail: "/images/banner2.png",
+  },
+  {
+    type: 'video',
+    url: '/videos/download.mp4',
+    thumbnail: "/images/banner3.png",
+  },
+];
+---
+<div class="z-20 bg-zinc-900 h-screen max-h-screen w-full grid place-items-center justify-center overflow-hidden">
+  <div class="w-full h-auto">
+    <ImagesStories stories={stories} index={index} client:load/>
+  </div>
+</div>

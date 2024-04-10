@@ -1,0 +1,47 @@
+---
+import ContentPost from '../layouts/ContentPost.astro'
+import FacebookIcon from '../components/Icons/social/FacebookIcon.astro'
+import InstagramIcon from '../components/Icons/social/InstagramIcon.astro'
+import YoutubeIcon from '../components/Icons/social/YoutubeIcon.astro'
+import TiktokIcon from '../components/Icons/social/TiktokIcon.astro'
+---
+<ContentPost content='Redes Sociales'>
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <a href={`https://www.youtube.com/@teamcellmania877`} target="_blank">
+      <header class="flex items-center gap-2 mb-2">
+        <YoutubeIcon/>
+        <span class="font-bold">Youtube</span>
+      </header>
+      <section class="text-left opacity-70 line-clamp-3 text-xs">
+        Canal de videos introductorias y presentacion de temas...
+      </section>
+    </a>
+    <a href={`https://www.facebook.com/teamcellmania`} target="_blank">
+      <header class="flex items-center gap-2 mb-2">
+        <FacebookIcon />
+        <span class="font-bold">Facebook</span>
+      </header>
+      <section class="text-left opacity-70 text-xs line-clamp-3">
+        Puedes seguir nuestra pagina de Faceebok
+      </section>
+    </a>
+    <a href={`https://www.instagram.com/teamcellmania`} target="_blank">
+      <header class="flex items-center gap-2 mb-2">
+        <InstagramIcon />
+        <span class="font-bold">Instagram</span>
+      </header>
+      <section class="text-left opacity-70 line-clamp-3 text-xs">
+        Instagram
+      </section>
+    </a>
+    <a href={`https://www.tiktok.com/@teamcellmania_13?_t=8aocA7rf4gY&_r=1`} target="_blank">
+      <header class="flex items-center gap-2 mb-2">
+        <TiktokIcon />
+        <span class="font-bold">Tiktok</span>
+      </header>
+      <section class="text-left opacity-70 line-clamp-3 text-xs">
+        Cuenta de Tiktok de TeamCellmania
+      </section>
+    </a>
+  </section>
+</ContentPost>

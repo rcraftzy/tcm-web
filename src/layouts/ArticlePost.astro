@@ -1,0 +1,16 @@
+---
+import { type CollectionEntry } from 'astro:content';
+
+export interface props {
+  posts: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const { title, description, pubDate, updatedDate, heroImage } = post.data 
+---
+<div class="mb-6">
+  <h1 class="text-4xl font-bold mb-6">{title}</h1>
+  <p class="font-bold opacity-70">{description}</p>
+</div>
+<Content />
