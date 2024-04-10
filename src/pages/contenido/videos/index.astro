@@ -7,7 +7,9 @@ import { db, Videos } from "astro:db";
 
 const videos = await db.select().from(Videos);
 
-const sortedPost = await getSortedVideos(videos)
+console.log(videos)
+
+const sortedPost = getSortedVideos(videos)
 
 const pagination = getPagination({
   posts: sortedPost,

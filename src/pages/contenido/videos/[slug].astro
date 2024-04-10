@@ -22,7 +22,7 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params
 const videos = await db.select().from(Videos);
-const sortedPost = await getSortedVideos(videos)
+const sortedPost = getSortedVideos(videos)
 
 const pagination = getPagination({
   posts: sortedPost,
