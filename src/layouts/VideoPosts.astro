@@ -2,7 +2,7 @@
 import Button from '../components/Button.astro';
 import CardVideos from '../components/CardVideos.astro';
 import Pagination from '../components/Pagination.astro';
-import type { Video } from "../types"
+import type { VideoYoutube } from "../types"
 
 export interface Prosp {
   currentPage: number;
@@ -25,7 +25,7 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props
   />
 </header>
 <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 group">
-  {paginatedPosts.map((video: Video, index: number) => (
+  {paginatedPosts.map((video: VideoYoutube, index: number) => (
     <CardVideos data={video} loading={index < 9 ? "eager" : "lazy"}/>
   ))}
 </section>
