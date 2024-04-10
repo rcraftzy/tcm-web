@@ -15,12 +15,12 @@ export interface Props extends DatetimesProps {
 export default function Datetime({
   pubDate,
   modDate,
-  size = "xs",
+  size = "sm",
   className,
   readingTime,
 }: Props) {
   return (
-    <span className={`italic ${size === "xs" ? "text-xs" : "text-sm"}`}>
+    <span className={`italic ${size === "sm" ? "text-xs" : "text-sm"}`}>
       <FormattedDatetime pubDate={pubDate} modDate={modDate} />
       <span> ({readingTime})</span> {/* display reading time */}
     </span>

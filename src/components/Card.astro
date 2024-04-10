@@ -4,11 +4,11 @@ import { Image } from "astro:assets";
 
 export interface Props {
   href?: string;
-  loading?: string;
+  loading?: "eager" | "lazy" | null | undefined;
   frontmatter: CollectionEntry<"blog">["data"];
   className?: string
 }
-const { href, frontmatter, loading = "", className = "" } = Astro.props
+const { href, frontmatter, loading, className = "" } = Astro.props
 const { title, pubDate, modDate, heroImage, description, tags, readingTime } = frontmatter;
 
 let width = 300*2;

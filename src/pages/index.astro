@@ -1,13 +1,8 @@
 ---
 import Header from "../components/Header.astro"
 import Body from "../components/Body.astro"
-import { VideoPlayer, StoryContainer } from "../components/VideoPlayer.jsx"
-import Content from "../components/Content.astro"
-import Sidebar from "../components/Sidebar.astro"
 import BaseHead from "../components/BaseHead.astro"
 import Footer from "../components/Footer.astro"
-import StoriesItem from "../components/StoriesItem.astro"
-import ImagesStories from "../components/ImagesStories"
 import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_URL } from '../config'
 import { Image } from 'astro:assets'
 import getSortedPosts from "../utils/getSortedPosts"
@@ -15,9 +10,8 @@ import Card from "../components/Card.astro"
 import { getCollection } from "astro:content"
 import { db, Videos } from "astro:db"
 import getSortedVideos from "../utils/getSortedVideos"
-import type { Story, Video } from "../types"
+import type { VideoYoutube } from "../types"
 import CardVideos from "../components/CardVideos.astro"
-import { InstaStories } from "../components/InstaStories"
 import Button from "../components/Button.astro"
 import ArticleIcon from "../components/Icons/ArticleIcon.astro"
 import VideoIcon from "../components/Icons/VideoIcon.astro"
@@ -194,7 +188,7 @@ const sortedPosts = await getSortedPosts(posts);
           </div>
         </header>
         <section class="grid grid-cols-2 md:grid-cols-4 gap-4 group">
-          {sortedVideos.map((video: Video, index:number) => index < 4 && (
+          {sortedVideos.map((video: VideoYoutube, index:number) => index < 4 && (
             <CardVideos data={video} loading="lazy"/>
           ))}
         </section>

@@ -1,14 +1,14 @@
 ---
 import { Image } from "astro:assets";
-import type { Video } from "../types"
+import type { VideoYoutube } from "../types"
 
 export interface Props {
-  data: Video
-  loading?: string
+  data: VideoYoutube
+  loading?: "eager" | "lazy" | null | undefined
 }
 
 const { data, loading } = Astro.props
-const { link, title } = data
+const { link = "", title } = data
 
 const idVideo = link.replace("https://youtu.be/", "") 
 
