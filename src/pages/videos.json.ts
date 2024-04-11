@@ -1,4 +1,4 @@
-import { Videos, db } from "astro:db";
+import { db, Videos } from "astro:db";
 import type { APIRoute } from 'astro'
 
 export const GET: APIRoute = async () => {
