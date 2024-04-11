@@ -1,7 +1,7 @@
-import { column, defineDb, defineTable } from 'astro:db';
+import { column, defineDb } from 'astro:db';
 
 // https://astro.build/db/config
-const Videos = defineTable({
+const Videos = {
   columns: {
     id: column.text({primaryKey: true}),
     title: column.text(),
@@ -10,8 +10,8 @@ const Videos = defineTable({
     published: column.text(),
     viewTime: column.text(),
     tags: column.json()
-  }
-})
+  },
+}
 
 export default defineDb({
   tables: { Videos }
