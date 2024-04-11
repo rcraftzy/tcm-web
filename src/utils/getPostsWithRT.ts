@@ -3,9 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "./slugify";
 
 export const getReadingTime = async () => {
-  const globPosts = import.meta.glob("../content/blog/*.md") as Promise<
-    CollectionEntry<"blog">["data"][]
-  >;
+  const globPosts = Promise<CollectionEntry<"blog">["data"][]>;
 
   const mapFrontmatter = new Map();
   const globPostsValues = Object.values(globPosts);
