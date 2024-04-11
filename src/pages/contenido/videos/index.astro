@@ -3,11 +3,11 @@ import ContentPost from '../../../layouts/ContentPost.astro'
 import VideoPosts from "../../../layouts/VideoPosts.astro";
 import getSortedVideos from "../../../utils/getSortedVideos"
 import getPagination from "../../../utils/getPagination";
-import { db, Videos } from "astro:db";
+import { GET } from '../../videos.json';
 
-const videos = await db.select().from(Videos);
-
-const sortedPost = await getSortedVideos(videos)
+let videos = await GET(Astro);
+const result = await videos.json()
+const sortedPost = getSortedVideos(result)
 
 const pagination = getPagination({
   posts: sortedPost,
