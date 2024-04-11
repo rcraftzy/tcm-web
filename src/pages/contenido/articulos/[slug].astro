@@ -26,6 +26,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+const { data: { title } } = post
 
 const { slug } = Astro.params;
 const posts = await getCollection("blog");
@@ -39,7 +40,7 @@ const pagination = getPagination({
 {
   post 
     ? 
-      <ContentPost content={post.data.title}>
+      <ContentPost content={title}>
         <ArticlePost post={post} />
       </ContentPost>
     : 
