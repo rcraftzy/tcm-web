@@ -8,7 +8,6 @@ import { Image } from 'astro:assets'
 import getSortedPosts from "../utils/getSortedPosts"
 import Card from "../components/Card.astro"
 import { getCollection } from "astro:content"
-import { db, Videos } from "astro:db"
 import getSortedVideos from "../utils/getSortedVideos"
 import type { VideoYoutube } from "../types"
 import CardVideos from "../components/CardVideos.astro"
@@ -16,11 +15,13 @@ import Button from "../components/Button.astro"
 import ArticleIcon from "../components/Icons/ArticleIcon.astro"
 import VideoIcon from "../components/Icons/VideoIcon.astro"
 import Masthead from "../components/Masthead.astro"
+import { GET } from "./videos.json"
 
 const posts = await getCollection("blog");
 
-const videos = await db.select().from(Videos);
-const sortedVideos = getSortedVideos(videos)
+let videos = await GET(Astro);
+const result = await videos.json()
+const sortedVideos = getSortedVideos(result)
 
 const sortedPosts = await getSortedPosts(posts);
 ---
