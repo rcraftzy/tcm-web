@@ -2,8 +2,14 @@
 import Button from "./Button.astro";
 import ImagesStories from "./ImagesStories";
 import StoriesItem from "./StoriesItem.astro";
+import { STOREPAGE_URL } from "../config";
 
 const stories = [
+  {
+    type: 'video',
+    url: '/videos/video.mp4',
+    thumbnail: "/images/stories/thumbnail1.png",
+  },
   {
     type: 'video',
     duration: 26000,
@@ -45,7 +51,7 @@ const stories = [
             </Button>
           </div>
           <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
-            <a href="https://teamcellmania.com/products" target="_blank" class="btn bg-green-700 m-2">Ir a la tienda</a>
+            <a href={STOREPAGE_URL} target="_blank" class="btn bg-green-700 m-2">Ir a la tienda</a>
           </div>
         </div>
       </header>

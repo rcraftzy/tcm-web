@@ -1,6 +1,7 @@
 ---
 import HeaderLink from "./HeaderLink.astro"
 import { Image } from "astro:assets";
+import { STOREPAGE_URL } from "../config";
 
 const aspectRatio = 0.9881422925 
 const width = 500 * 2
@@ -20,10 +21,10 @@ const height = width / aspectRatio
           alt="Logo Team cellmania">
       </a>
       <span class="flex-1"></span>
-      <nav class="text-white flex flex-row gap-1 items-center">
-        <HeaderLink class="px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 group-hover:opacity-30 hover:!opacity-60 transition-opacity" href={"/contenido"}>Contenido</HeaderLink>
-        <HeaderLink class="px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 group-hover:opacity-30 hover:!opacity-60 transition-opacity" href={"/social"}>Redes</HeaderLink>
-        <a class="px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 group-hover:opacity-30 hover:!opacity-60 transition-opacity" href={"https://teamcellmania.com/products"} target="_blank">Tienda</a>
+      <nav class="flex flex-row gap-1 items-center">
+        <HeaderLink class="group px-3 py-2 rounded-lg hover:bg-orange-200 opacity-60 hover:opacity-100 transition-all" href={"/contenido"}>Contenido</HeaderLink>
+        <HeaderLink class="group px-3 py-2 rounded-lg hover:bg-orange-200 opacity-60 hover:opacity-100 transition-all" href={"/social"}>Redes</HeaderLink>
+        <a class="group px-3 py-2 rounded-lg hover:bg-orange-200 opacity-60 hover:opacity-100 transition-all" href={STOREPAGE_URL} target="_blank">Tienda</a>
       </nav>
     </div>
   </section>
