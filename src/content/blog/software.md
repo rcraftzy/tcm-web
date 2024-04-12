@@ -21,12 +21,6 @@ Ante qué situaciones se puede dañar el software de mi dispositivo:
  
 Para estos casos, el equipo de TeamCellmania cuenta con el servicio de reparación de software para todas las marcas.
 
-> [!WARNING]
-> Para recibir más información o un costo de reparación, te invitamos a acercarte a uno de nuestros locales, recuerda que es IMPORTANTE para nuestros técnicos hacer un diagnóstico previo a la reparación.
-
-> [!NOTE]
-> Cada dispositivo tiene diferentes procesos de reparación, lo que se describe a continuación son pasos generales para reparación de equipos, para más información revise la sección de \"Nuestro Contenido\" o nuestro canal de youtube.
-
 ¿Cómo realizan nuestros técnicos la reparación del software del dispositivo?
 
 Después que nuestros técnicos realizan un diagnóstico, se pasa a usar equipo especializado para detectar los distintos tipos de afecciones que sufre el dispositivo, en el que se trabaja en recuperación de datos, software, entre otros problemas.

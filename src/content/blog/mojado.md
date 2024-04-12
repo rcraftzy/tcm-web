@@ -15,12 +15,6 @@ tags:
 - Humedad: hace que los componentes de audio y cámaras no funcionen correctamente.
 - Daños en la pantalla: deja de funcionar o aparecen burbujas de líquido en el equipo.
 
-> [!WARNING]
-> Para recibir más información o un costo de reparación, te invitamos a acercarte a uno de nuestros locales, recuerda que es IMPORTANTE para nuestros técnicos hacer un diagnóstico previo a la reparación.
-
-> [!CAUTION]
-> Cada dispositivo tiene diferentes procesos de reparación, lo que se describe a continuación son pasos generales para reparación de equipos, para más información revise la sección de \"Nuestro Contenido\" o nuestro canal de youtube.
-
 Para estos casos, el equipo de TeamCellmania cuenta con el servicio de reparación de dispositivos mojados para todas las marcas.
 
 ¿Cómo realizan nuestros técnicos la reparación de dispositivos mojados?

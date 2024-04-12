@@ -18,12 +18,6 @@ Ante qué situaciones se daña mi pin de carga:
 
 Para estos casos, el equipo de TeamCellmania cuenta con el servicio de reparación y cambio de pin de carga para todas las marcas.
 
-> [!WARNING]
-> Para recibir más información o un costo de reparación, te invitamos a acercarte a uno de nuestros locales, recuerda que es IMPORTANTE para nuestros técnicos hacer un diagnóstico previo a la reparación.
-
-> [!CAUTION]
-> Cada dispositivo tiene diferentes procesos de reparación, lo que se describe a continuación son pasos generales para reparación de equipos, para más información revise la sección de \"Nuestro Contenido\" o nuestro canal de youtube.
-
 ¿Cómo realizan nuestros técnicos la reparación del pin de carga?
 
 Después de realizar un correcto diagnostico por nuestros técnicos, se realizan los siguientes pasos:

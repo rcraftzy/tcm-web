@@ -17,12 +17,6 @@ Ante qué situaciones se daña mi micrófono:
 
 Para estos casos, el equipo de TeamCellmania cuenta con el servicio de reparación o cambio de micrófono para todas las cámaras.
 
-> [!WARNING]
-> Para recibir más información o un costo de reparación, te invitamos a acercarte a uno de nuestros locales, recuerda que es IMPORTANTE para nuestros técnicos hacer un diagnóstico previo a la reparación.
-
-> [!CAUTION]
-> Cada dispositivo tiene diferentes procesos de reparación, lo que se describe a continuación son pasos generales para reparación de equipos, para más información revise la sección de \"Nuestro Contenido\" o nuestro canal de youtube.
-
 ¿Cómo realizan nuestros técnicos el cambio de micrófono?
 
 Después que nuestros técnicos realizan un diagnóstico previo, se procede con los siguientes pasos:

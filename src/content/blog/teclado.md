@@ -17,12 +17,6 @@ Ante qué situaciones se puede dañar el teclado de mi laptop:
 
 Para estos casos, el equipo de TeamCellmania cuenta con el servicio de revisión o cambio de teclado para todas las marcas.
 
-> [!WARNING]
-> Para recibir más información o un costo de reparación, te invitamos a acercarte a uno de nuestros locales, recuerda que es IMPORTANTE para nuestros técnicos hacer un diagnóstico previo a la reparación.
-
-> [!CAUTION]
-> Cada dispositivo tiene diferentes procesos de reparación, lo que se describe a continuación son pasos generales para reparación de equipos, para más información revise la sección de \"Nuestro Contenido\" o visite nuestro canal de youtube.
-
 ¿Cómo realizan nuestros técnicos la reparación o cambio de teclado?
 
 Después de realizar un correcto diagnóstico por nuestros técnicos, se realizan los siguientes pasos:"
