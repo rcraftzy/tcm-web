@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import BaseHead from "../components/BaseHead.astro";
+import Body from "../components/Body.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
+
+---
+<html lang="es" class="scroll-smooth">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Header />
+    <main class="pt-[76px]">
+      <section class="mt-36 mx-auto max-w-4xl p-4 h-svh">
+        <div class="flex flex-col justify-center items-center">
+          <h1 class="text-6xl mb-6">404</h1>
+          <Image class="mb-6" src="/images/this-is-fine-404.gif" alt="this is fine 404" width={300}  height={168} loading="eager" decoding="sync"/>
+          <a href="/" class="font-thin opacity-60 hover:opacity-100 transition-all text-xl">Volver al a pagina principal</a>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </Body>
+</html>
