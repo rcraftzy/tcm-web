@@ -11,8 +11,6 @@ export const GET: APIRoute = async () => {
     })
   }
 
-  console.log(videos)
-
   return new Response(
     JSON.stringify(videos), {
       status: 200,
