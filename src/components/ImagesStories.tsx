@@ -14,8 +14,10 @@ const ImagesStories: React.FC<Props> = ({ stories, index = 0 }) => (
 		onAllStoriesEnd={() => {}}
     currentIndex={index}
     isPaused={true}
+    loop={true}
 		classNames={{
-			progressContainer: "mt-[19px] mx-10",
+      main: "main-story",
+      progressContainer: "progress-story mt-[19px] mx-10 invisible hover:visible",
 		}}
 	/>
 );
