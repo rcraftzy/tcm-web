@@ -3,7 +3,7 @@ import type { Site } from './types'
 export const SITE_TITLE = "TeamCellmania"
 export const SITE_DESCRIPTION= "Reparación y venta de celulares, personalizados, mantenimiento y reparación de computadoas en Cañar Azogues"
 export const HOMEPAGE_URL = "https://teamcellmania.com"
-export const STOREPAGE_URL = "https://teamcellmania.com/products"
+export const STOREPAGE_URL = "https://store.teamcellmania.com/products"
 
 export const SITE: Site = {
   website: HOMEPAGE_URL, // replace this with your deployed domain
