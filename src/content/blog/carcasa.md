@@ -18,12 +18,6 @@ En qué casos debo cambiar mi carcasa:
 
 Para estos casos, el equipo de TeamCellmania cuenta con el servicio de reparación o cambio de altavoz para todas las marcas.
 
-> [!WARNING]
-> Para recibir más información o un costo de reparación, te invitamos a acercarte a uno de nuestros locales, recuerda que es IMPORTANTE para nuestros técnicos hacer un diagnóstico previo a la reparación.
-
-> [!NOTE]
-> Cada dispositivo tiene diferentes procesos de reparación, lo que se describe a continuación son pasos generales para reparación de equipos, para más información revise la sección de \"Nuestro Contenido\" o nuestro canal de youtube.
-
 ¿Cómo realizan nuestros técnicos el cambio de la carcasa?
 
 Después de realizar un correcto diagnóstico por nuestros técnicos, se realizan los siguientes pasos:

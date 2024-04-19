@@ -6,41 +6,40 @@ import YoutubeIcon from '../components/Icons/social/YoutubeIcon.astro'
 import TiktokIcon from '../components/Icons/social/TiktokIcon.astro'
 ---
 <ContentPost content='Redes Sociales'>
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-10">
-    <a href={`https://www.youtube.com/@teamcellmania877`} target="_blank">
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-10 group">
+    <a class="group-hover:opacity-60 hover:!opacity-100 transition-opacity" href={`https://www.youtube.com/@teamcellmania877`} target="_blank">
       <header class="flex items-center gap-2 mb-2">
         <YoutubeIcon/>
         <span class="font-bold">Youtube</span>
       </header>
-      <section class="text-left opacity-70 line-clamp-3 text-xs">
-        Canal de videos introductorias y presentacion de temas...
-      </section>
+      <section class="text-left opacity-70 line-clamp-5 text-xs">
+        Sumérgete en nuestros videos que destacan nuestras habilidades de reparación técnica y los productos más novedosos del mercado.</section>
     </a>
-    <a href={`https://www.facebook.com/teamcellmania`} target="_blank">
+    <a class="group-hover:opacity-60 hover:!opacity-100 transition-opacity" href={`https://www.facebook.com/teamcellmania`} target="_blank">
       <header class="flex items-center gap-2 mb-2">
         <FacebookIcon />
         <span class="font-bold">Facebook</span>
       </header>
-      <section class="text-left opacity-70 text-xs line-clamp-3">
-        Puedes seguir nuestra pagina de Faceebok
+      <section class="text-left opacity-70 text-xs line-clamp-5">
+        Mantente actualizado con las últimas tendencias en tecnología y soluciones para tus dispositivos.
       </section>
     </a>
-    <a href={`https://www.instagram.com/teamcellmania`} target="_blank">
+    <a class="group-hover:opacity-60 hover:!opacity-100 transition-opacity" href={`https://www.instagram.com/teamcellmania`} target="_blank">
       <header class="flex items-center gap-2 mb-2">
         <InstagramIcon />
         <span class="font-bold">Instagram</span>
       </header>
-      <section class="text-left opacity-70 line-clamp-3 text-xs">
-        Instagram
+      <section class="text-left opacity-70 line-clamp-5 text-xs">
+        Descubre el mundo de la tecnología con Team Cellmania en Instagram, nuestro contenido visualmente atractivo te mantendrá inspirado y actualizado.
       </section>
     </a>
-    <a href={`https://www.tiktok.com/@teamcellmania_13?_t=8aocA7rf4gY&_r=1`} target="_blank">
+    <a class="group-hover:opacity-60 hover:!opacity-100 transition-opacity" href={`https://www.tiktok.com/@teamcellmania_13?_t=8aocA7rf4gY&_r=1`} target="_blank">
       <header class="flex items-center gap-2 mb-2">
         <TiktokIcon />
         <span class="font-bold">Tiktok</span>
       </header>
-      <section class="text-left opacity-70 line-clamp-3 text-xs">
-        Cuenta de Tiktok de TeamCellmania
+      <section class="text-left opacity-70 text-xs">
+        Cautivate con nuestros videos cortos y entretenidos que muestran las mejores reparaciones técnicas y productos de vanguardia.
       </section>
     </a>
   </section>

@@ -6,9 +6,6 @@ export default {
       fontFamily: {
         mplus: ["'M PLUS Rounded 1c'", 'Verdana', 'sans-serif']
       },
-      colors: {
-        "gray-bg": "#2E2E2E",
-      }
     },
 	},
 	plugins: [],

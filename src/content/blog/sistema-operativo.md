@@ -20,12 +20,6 @@ Cuándo debo revisar el sistema operativo de mi equipo:
 
 Para estos casos, el equipo de TeamCellmania cuenta con el servicio de revisión del software del sistema para todas las marcas.
 
-> [!WARNING]
-> Para recibir más información o un costo de reparación, te invitamos a acercarte a uno de nuestros locales, recuerda que es IMPORTANTE para nuestros técnicos hacer un diagnóstico previo a la reparación.
-
-> [!CAUTION]
-> Cada dispositivo tiene diferentes procesos de reparación, lo que se describe a continuación son pasos generales para reparación de equipos, para más información revise la sección de \"Nuestro Contenido\" o visite nuestro canal de youtube.
-
 ¿Cómo realizan nuestros técnicos la revisión del software?
 
 Después que nuestros técnicos realizan un diagnóstico previo, se procede con la revisión del sistema operativo y pruebas de rendimiento, se determinan los fallos en el sistema operativo, programas o controladores del equipo, cada caso varía y puede generar una afección diferente.
