@@ -34,12 +34,12 @@ const sortedPosts = await getSortedPosts(posts);
     <Header />
     <main class="pt-[76px]">
       <Masthead />
-      <section class="mt-36 mx-auto max-w-4xl p-4">
-        <h2 class="mb-14 text-center">Brindamos servicios profecionales</h1>
+      <section class="mt-36 mx-auto max-w-4xl p-4 fade-up">
+        <h2 class="mb-14 text-center fade-up">Brindamos servicios profecionales</h1>
           <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="mb-0">
               <Image
-                class="aspect-video border border-zinc-700 rounded-xl object-cover"
+                class="aspect-video border border-slate-300 rounded-xl object-cover"
                 src='/images/nada/11.png'
                 width={288*2}
                 height={144}
@@ -53,7 +53,7 @@ const sortedPosts = await getSortedPosts(posts);
             </div>
             <div class="mb-0">
               <Image
-                class="aspect-video border border-zinc-700 rounded-xl object-cover"
+                class="aspect-video border border-slate-300 rounded-xl object-cover"
                 src='/images/nada/9-7.png'
                 width={288*2}
                 height={144}
@@ -67,7 +67,7 @@ const sortedPosts = await getSortedPosts(posts);
             </div>
             <div class="mb-0">
               <Image
-                class="aspect-video border border-zinc-700 rounded-xl object-cover"
+                class="aspect-video border border-slate-300 rounded-xl object-cover"
                 src='/images/nada/10-0.png'
                 width={288*2}
                 height={144}
@@ -81,7 +81,7 @@ const sortedPosts = await getSortedPosts(posts);
             </div>
             <div class="mb-0">
               <Image
-                class="aspect-video border border-zinc-700 rounded-xl object-cover"
+                class="aspect-video border border-slate-300 rounded-xl object-cover"
                 src='/images/nada/12.png'
                 width={288*2}
                 height={144}
@@ -98,19 +98,19 @@ const sortedPosts = await getSortedPosts(posts);
       <section class="mx-auto max-w-4xl p-4">
         <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div
-            class="aspect-video flex flex-col justify-center border border-zinc-700 rounded-xl object-cover"
+            class="aspect-video flex flex-col justify-center border border-slate-300 rounded-xl object-cover"
           >
             <h5 class="text-center font-bold text-4xl">+10.000</h5>
             <span class="text-center opacity-70">Ordenes de servicio</span>
           </div>
           <div
-            class="aspect-video flex flex-col justify-center border border-zinc-700 rounded-xl object-cover"
+            class="aspect-video flex flex-col justify-center border border-slate-300 rounded-xl object-cover"
           >
             <h5 class="text-center font-bold text-4xl">277</h5>
             <span class="text-center opacity-70">Tiktoks</span>
           </div>
           <div
-            class="aspect-video flex flex-col justify-center border border-zinc-700 rounded-xl object-cover"
+            class="aspect-video flex flex-col justify-center border border-slate-300 rounded-xl object-cover"
           >
             <h5 class="text-center font-bold text-4xl">
               {sortedPosts.length}
@@ -118,7 +118,7 @@ const sortedPosts = await getSortedPosts(posts);
             <span class="text-center opacity-70">Articulos</span>
           </div>
           <div
-            class="aspect-video flex flex-col justify-center border border-zinc-700 rounded-xl object-cover"
+            class="aspect-video flex flex-col justify-center border border-slate-300 rounded-xl object-cover"
           >
             <h5 class="text-center font-bold text-4xl">185</h5>
             <span class="text-center opacity-70">Videos en youtube</span>
@@ -166,7 +166,7 @@ const sortedPosts = await getSortedPosts(posts);
             </p>
 
             <div style="--animation-delay: 0.6s" class="items-center fade-up inline-flex flex-wrap gap-4">
-              <a href={"https://teamcellmania.com/products"} class="btn bg-blue-900 text-zinc-900">
+              <a href={"https://teamcellmania.com/products"} class="btn bg-blue-900 text-zinc-300">
                 <div class="fill-none stroke-zinc-300 w-6">
                   <svg viewBox="0 0 24 24"><g stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 22a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM9.5 22a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" fill="#000"/><path d="M16.5 4H22l-2 11h-4.5m1-11-1 11m1-11h-5.75m4.75 11h-4m-.75-11H5l2 11h4.5m-.75-11 .75 11M5 4c-.167-.667-1-2-3-2M20 15H5.23c-1.784 0-2.73.781-2.73 2 0 1.219.946 2 2.73 2H19.5"/></g></svg>
                 </div>
