@@ -1,0 +1,37 @@
+---
+export interface Props {
+  articlesLength: number;
+}
+
+const { articlesLength } = Astro.props;
+---
+<section class="mx-auto max-w-4xl p-4">
+  <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div
+      class="aspect-video flex flex-col justify-center border border-slate-300 rounded-xl object-cover"
+    >
+      <h5 class="text-center font-bold text-4xl">+10.000</h5>
+      <span class="text-center opacity-70">Ordenes de servicio</span>
+    </div>
+    <div
+      class="aspect-video flex flex-col justify-center border border-slate-300 rounded-xl object-cover"
+    >
+      <h5 class="text-center font-bold text-4xl">277</h5>
+      <span class="text-center opacity-70">Tiktoks</span>
+    </div>
+    <div
+      class="aspect-video flex flex-col justify-center border border-slate-300 rounded-xl object-cover"
+    >
+      <h5 class="text-center font-bold text-4xl">
+        {articlesLength}
+      </h5>
+      <span class="text-center opacity-70">Articulos</span>
+    </div>
+    <div
+      class="aspect-video flex flex-col justify-center border border-slate-300 rounded-xl object-cover"
+    >
+      <h5 class="text-center font-bold text-4xl">185</h5>
+      <span class="text-center opacity-70">Videos en youtube</span>
+    </div>
+  </section>
+</section>

@@ -6,23 +6,48 @@ import {SITE_DESCRIPTION, SITE_TITLE} from "../../config.ts"
 
 export async function getStaticPaths() {
   const stories = [
-    {
-      type: 'video',
-      duration: 26000,
-      url: '/videos/xiaomi-unboxing.mp4',
-      thumbnail: "/images/banner1.png",
-    },
-    {
-      type: 'video',
-      url: '/videos/troca.mp4',
-      duration: 5000,
-      thumbnail: "/images/banner2.png",
-    },
-    {
-      type: 'video',
-      url: '/videos/download.mp4',
-      thumbnail: "/images/banner3.png",
-    },
+ {
+    type: 'video',
+    url: '/videos/video.mp4',
+    thumbnail: "/images/stories/thumbnail1.png",
+    duration: 15000
+  },
+  {
+    type: 'video',
+    url: '/videos/video1.mp4',
+    thumbnail: "/images/stories/thumbnail2.png",
+    duration: 15000
+  },
+  {
+    type: 'video',
+    url: '/videos/video4.mp4',
+    thumbnail: "/images/stories/thumbnail3.png",
+    duration: 28000
+  },
+  {
+    type: 'video',
+    url: '/videos/video5.mp4',
+    thumbnail: "/images/stories/thumbnail3.png",
+    duration: 8000,
+  },
+  {
+    type: 'video',
+    url: '/videos/video6.mp4',
+    duration: 34000,
+    thumbnail: "/images/stories/thumbnail3.png",
+  },
+  {
+    type: 'video',
+    url: '/videos/video7.mp4',
+    thumbnail: "/images/stories/thumbnail3.png",
+    duration: 24000,
+  },
+  {
+    type: 'video',
+    url: '/videos/video8.mp4',
+    thumbnail: "/images/stories/thumbnail3.png",
+    duration: 30000,
+  },
   ];
   const postResult = stories.map((post,index) => ({
     params: { slug:  index},
@@ -34,24 +59,49 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params
 const stories = [
-    {
-      type: 'video',
-      duration: 26000,
-      url: '/videos/xiaomi-unboxing.mp4',
-      thumbnail: "/images/banner1.png",
-    },
-    {
-      type: 'video',
-      url: '/videos/troca.mp4',
-      duration: 5000,
-      thumbnail: "/images/banner2.png",
-    },
-    {
-      type: 'video',
-      url: '/videos/download.mp4',
-      thumbnail: "/images/banner3.png",
-    },
-  ];
+  {
+    type: 'video',
+    url: '/videos/video.mp4',
+    thumbnail: "/images/stories/thumbnail1.png",
+    duration: 15000
+  },
+  {
+    type: 'video',
+    url: '/videos/video1.mp4',
+    thumbnail: "/images/stories/thumbnail2.png",
+    duration: 15000
+  },
+  {
+    type: 'video',
+    url: '/videos/video4.mp4',
+    thumbnail: "/images/stories/thumbnail3.png",
+    duration: 28000
+  },
+  {
+    type: 'video',
+    url: '/videos/video5.mp4',
+    thumbnail: "/images/stories/thumbnail3.png",
+    duration: 8000,
+  },
+  {
+    type: 'video',
+    url: '/videos/video6.mp4',
+    duration: 34000,
+    thumbnail: "/images/stories/thumbnail3.png",
+  },
+  {
+    type: 'video',
+    url: '/videos/video7.mp4',
+    thumbnail: "/images/stories/thumbnail3.png",
+    duration: 24000,
+  },
+  {
+    type: 'video',
+    url: '/videos/video8.mp4',
+    thumbnail: "/images/stories/thumbnail3.png",
+    duration: 30000,
+  },
+];
 
 ---
 <!DOCTYPE html>
