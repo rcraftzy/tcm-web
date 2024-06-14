@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+---
+<section class="mx-auto max-w-4xl py-12">
+  <div class="flex justify-center">
+    <section class="flex flex-col md:flex-row-reverse bg-slate-800 p-5 md:py-5 md:px-14 justify-between gap-8">
+      <div class="max-w-[360px] flex-1">
+        <h2 class="text-slate-300 mt-14 md:mt-20 text-5xl text-center">Brindamos servicios profesionales</h2>
+        <article class="bg-slate-600 p-7 rounded mt-10">
+          <header class="mb-6">
+            <span class="text-base text-slate-300">Repuestos</span>
+          </header>
+          <div class="flex justify-center">
+            <Image
+            class="object-contain aspect-square"
+            src='/images/services/celular.webp'
+            width={260}
+            height={144}
+            alt="tumbnail"
+            loading={'lazy'}
+          />
+          </div>
+          <h4 class="text-slate-300 mt-3">Repuestos orginales para tus dispositivos</h4>
+        </article>
+      </div>
+      <div class="max-w-[360px] flex-1">
+        <article class="bg-slate-400 mt-0 md:-mt-14 p-7 rounded">
+          <header class="mb-6">
+            <span class="text-base">Servicio técnico</span>
+          </header>
+          <div class="relative flex justify-center">
+            <Image
+            class="object-contain aspect-square"
+            src='/images/services/playstation.webp'
+            width={260}
+            height={144}
+            alt="tumbnail"
+            loading={'eager'}
+          />
+            <div class="absolute bottom-0 left-0  items-center fade-up inline-flex flex-wrap gap-4">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={"https://orders.teamcellmania.com/check-order"}
+                class="btn bg-black text-zinc-300"
+                >
+                <span class="text-base">
+                  Consulta el estado de tu equipo
+                </span>
+              </a>
+            </div>
+          </div>
+          <h4 class="mt-3">Mantenimmiento y reparación de consolas</h4>
+        </article>
+        <article class="bg-slate-500 mt-8 mb-0 md:-mb-10 p-7 rounded">
+          <header class="mb-6">
+            <span class="text-base">Servicio técnico</span>
+          </header>
+          <div class="relative flex justify-center">
+            <Image
+            class="object-contain aspect-square"
+            src='/images/services/computadora.webp'
+            width={260}
+            height={144}
+            alt="tumbnail"
+            loading={'lazy'}
+          />
+            <div class="absolute bottom-0 left-0  items-center fade-up inline-flex flex-wrap gap-4">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={"https://orders.teamcellmania.com/check-order"}
+                class="btn bg-black text-zinc-300"
+                >
+                <span class="text-base">
+                  Consulta el estado de tu equipo
+                </span>
+              </a>
+            </div>
+          </div>
+          <h4 class="mt-3">Mantenimiento y reparación de computadoras</h4>
+        </article>
+      </div>
+    </section>
+  </div>
+</section>
