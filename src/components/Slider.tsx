@@ -94,7 +94,7 @@ const Slider = () => {
 											target="_blank"
 											rel="noopener noreferrer"
 											href={
-												STOREPAGE_URL + "/products/precalentadora-d-heater-v2"
+												STOREPAGE_URL + "/products/cnc"
 											}
 											className="btn bg-black text-zinc-300"
 										>
@@ -140,7 +140,7 @@ const Slider = () => {
 											target="_blank"
 											rel="noopener noreferrer"
 											href={
-												STOREPAGE_URL + "/products/precalentadora-d-heater-v2"
+												STOREPAGE_URL + "/products/lcd-para-zte-blade-v40-9045"
 											}
 											className="btn bg-black text-zinc-300"
 										>
@@ -251,7 +251,7 @@ const Slider = () => {
 											target="_blank"
 											rel="noopener noreferrer"
 											href={
-												STOREPAGE_URL + "/products/precalentadora-d-heater-v2"
+												STOREPAGE_URL + "/products/lcd-para-lenovo-tab-m10"
 											}
 											className="btn bg-black text-zinc-300"
 										>
