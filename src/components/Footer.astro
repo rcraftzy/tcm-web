@@ -1,5 +1,6 @@
 ---
 import TcmLogo from "../components/Icons/TcmLogo.astro"
+import { STOREPAGE_URL } from "../config"
 ---
 <footer class="max-w-xl mx-auto flex flex-col py-36">
   <header class="flex justify-center mb-12">
@@ -12,7 +13,7 @@ import TcmLogo from "../components/Icons/TcmLogo.astro"
   <nav class="flex justify-center gap-6">
     <a href="/contenido/articulos">Articulos</a>
     <a href="/contenido/videos">Videos</a>
-    <a href="https://teamcellmania.com/products" target="_blank">Tienda</a>
+    <a href={STOREPAGE_URL} target="_blank">Tienda</a>
     <a href="https://api.whatsapp.com/send/?phone=593963644323&text&type=phone_number&app_absent=0" target="_blank">Contactanos</a>
   </nav>
   <section class="flex justify-center my-12 items-center gap-8">

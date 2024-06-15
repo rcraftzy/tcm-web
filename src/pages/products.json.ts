@@ -1,7 +1,6 @@
-import type { APIRoute } from "astro";
 import { getAllProducts } from "../utils/shopify";
 
-export const POST: APIRoute = async () => {
+export const POST = async () => {
 	const res = await getAllProducts();
 
 	if (res.status === 200) {
