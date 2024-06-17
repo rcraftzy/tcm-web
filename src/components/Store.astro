@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import type { Product } from "../types";
-import Carousel from "./Carousel";
+// import Carousel from "./Carousel";
 import CardProducts from "./CardProducts.astro";
 import { POST } from "../pages/products.json";
 import { STOREPAGE_URL } from "../config";
@@ -31,7 +31,7 @@ const productsResult = await products?.json();
     </section>
   </section>
   <section class="mx-auto max-w-4xl px-4">
-    <Carousel client:load/>
+    <!-- <Carousel client:load/> -->
   </section>
 </section>
 <section class="mx-auto max-w-4xl p-4 mt-20">
@@ -48,7 +48,7 @@ const productsResult = await products?.json();
     href={`${STOREPAGE_URL}/products/nintendo-switch`}
     target="_blank"
   >
-    <Image alt="thumbnail" loading={'lazy'} class={`object-scale-down aspect-square h-44 w-44 transition duration-700 ease-in-out group-hover:scale-110`} src="/images/products/nintendo.webp" width={176} height={176} />
+    <Image alt="thumbnail" loading={'eager'} class={`object-scale-down aspect-square h-44 w-44 transition duration-700 ease-in-out group-hover:scale-110`} src="/images/products/nintendo.webp" width={176} height={176} />
     <h4 class="font-extrabold w-64 text-center group-hover:text-blue-800">Nintendo Switch</h4>
     <span class="font-extrabold text-center mt-3">$275</span>
   </a>
@@ -57,7 +57,7 @@ const productsResult = await products?.json();
     href={`${STOREPAGE_URL}/products/regulador-de-voltaje-120-220v`}
     target="_blank"
   >
-    <Image alt="thumbnail" loading={'lazy'} class={`object-scale-down aspect-square h-44 w-44 transition duration-700 ease-in-out group-hover:scale-110`} src="/images/products/regulador.webp" width={176} height={176} />
+    <Image alt="thumbnail" loading={'eager'} class={`object-scale-down aspect-square h-44 w-44 transition duration-700 ease-in-out group-hover:scale-110`} src="/images/products/regulador.webp" width={176} height={176} />
     <h4 class="font-extrabold w-64 text-center group-hover:text-blue-800">Regulador de voltaje</h4>
     <span class="font-extrabold text-center mt-3">$110</span>
   </a>
@@ -71,9 +71,9 @@ const productsResult = await products?.json();
 </header>
 <section class="flex flex-wrap justify-center gap-x-10 gap-y-5">
   {
-  productsResult?.allProducts.edges.map((product: Product) => (
-              <CardProducts product={product}/>
-  ))
+    productsResult?.allProducts.edges.map((product: Product) => (
+      <CardProducts product={product}/>
+    ))
   }
 </section>
 <section>

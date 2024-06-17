@@ -16,10 +16,10 @@ import VideoIcon from "../components/Icons/VideoIcon.astro";
 import Masthead from "../components/Masthead.astro";
 import { GET } from "./videos.json";
 const posts = await getCollection("blog");
-import Slider from "../components/Slider";
 import Services from "../components/Services.astro";
 import Store from "../components/Store.astro";
 import Summary from "../components/Summary.astro";
+import Swiper from "../components/Swiper.astro";
 
 let videos = await GET(Astro);
 const result = await videos.json();
@@ -36,7 +36,7 @@ const sortedPosts = await getSortedPosts(posts);
     <Header />
     <main class="pt-[76px]">
       <section class="mx-auto max-w-4xl p-0 md:p-4">
-        <Slider client:load />
+        <Swiper />
       </section>
       <Summary articlesLength={sortedPosts.length} />
       <Services />
