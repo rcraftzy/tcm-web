@@ -2,10 +2,7 @@
 import HeaderLink from "./HeaderLink.astro"
 import { Image } from "astro:assets";
 import { STOREPAGE_URL } from "../config";
-
-const aspectRatio = 0.9881422925 
-const width = 500 * 2
-const height = width / aspectRatio
+import tcmLogo from "../../public/tcm-logo.webp"
 ---
 <header class="fixed w-full py-2 backdrop-blur-xl z-20">
   <section class="max-w-4xl mx-auto">
@@ -13,9 +10,8 @@ const height = width / aspectRatio
       <a href="/" class="my-1">
         <Image
           class="max-w-44 max-h-12 w-full object-cover" 
-          src="/tcm-logo.webp" 
-          width={width}
-          height={height}
+          src={tcmLogo} 
+          width={tcmLogo.width}
           loading="eager"
           decoding="sync"
           alt="Logo Team cellmania">
