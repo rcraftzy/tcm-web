@@ -1,7 +1,7 @@
 ---
 title: Sistema/Software
 description: El sistema con el que se controla nuestro equipo es susceptible tanto a problemas de pérdida de datos en la memoria o fallos del sistema operativo, quedándose en el logo de la marca al momento de encender el dispositivo.
-heroImage: /images/contents/197.png
+heroImage: /images/contents/197.webp
 pubDate: 'Jul 08 2022'
 modDate: Jul 08 2022
 draft: false

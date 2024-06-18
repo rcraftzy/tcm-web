@@ -1,7 +1,7 @@
 ---
 title: Placa 
 description: La placa de nuestro dispositivo es el centro de todo funcionamiento, el cerebro de nuestro equipo, el cual es susceptible a daños a pesar de estar en el centro de nuestro móvil.
-heroImage: /images/contents/Placa-300x212.png
+heroImage: /images/contents/Placa-300x212.webp
 pubDate: Jul 08 2022
 modDate: Jul 08 2022
 draft: false

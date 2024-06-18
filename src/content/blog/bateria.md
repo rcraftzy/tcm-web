@@ -1,7 +1,7 @@
 ---
 title: Batería
 description: Las baterías de dispositivos móviles, se degradan a lo largo del tiempo, reduciendo su capacidad de carga o llegando al final de su vida útil, lo que causa que se hinche llegando a dañar incluso la estructura del teléfono.
-heroImage: /images/contents/Bateria-1-1-300x212.png
+heroImage: /images/contents/Bateria-1-1-300x212.webp
 pubDate: Jul 08 2022
 modDate: Jul 08 2022
 draft: false

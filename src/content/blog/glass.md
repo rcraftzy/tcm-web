@@ -1,7 +1,7 @@
 ---
 title: Glass
 description: Uno de los problemas comunes con los teléfonos móviles y tables es la ruptura de la pantalla, rompiendo sus componentes, el touch que cumple con la función táctil y mostrar el contenido multimedia y el glass, que protege la pantalla.
-heroImage: /images/contents/Glass-1-300x300.png
+heroImage: /images/contents/Glass-1-300x300.webp
 pubDate: Jul 08 2022
 modDate: Jul 08 2022
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: Pantalla
 description: Uno de los problemas comunes con los teléfonos móviles y tablets es la ruptura o fallo de la pantalla, dañando sus componentes, el touch que cumple con la función táctil y mostrar el contenido multimedia y el glass, que protege la pantalla, el cual no es infalible, y ante diferentes situaciones puede dañar el touch.
-heroImage: /images/contents/Pantalla-1-300x212.png
+heroImage: /images/contents/Pantalla-1-300x212.webp
 pubDate: Jul 08 2022
 modDate: Jul 08 2022
 draft: false

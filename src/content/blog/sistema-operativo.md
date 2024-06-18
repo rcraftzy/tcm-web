@@ -1,7 +1,7 @@
 ---
 title: Sistema Operativo
 description: El funcionamiento del dispositivo se basa en su sistema operativo y programas para el control de cada componente.
-heroImage: /images/contents/197.png
+heroImage: /images/contents/197.webp
 pubDate: Jul 08 2022
 modDate: Jul 08 2022
 draft: false

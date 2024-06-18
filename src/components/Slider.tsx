@@ -62,16 +62,16 @@ const Slider = () => {
 							<section className="flex">
 								<img
 									src="images/products/precalentadora1.webp"
-									className="h-96 w-28 md:h-80 md:w-24"
-									width={112}
+									className="h-96 w-[119px] md:h-80 md:w-24"
+									width={119}
 									height={384}
 									loading={"eager"}
 									alt="precalentadora"
 								/>
 								<img
 									src="images/products/precalentadora2.webp"
-									className="h-96 w-28 md:h-80 md:w-24"
-									width={112}
+									className="h-96 w-[117px] md:h-80 md:w-24"
+									width={117}
 									height={384}
 									loading={"eager"}
 									alt="precalentadora"

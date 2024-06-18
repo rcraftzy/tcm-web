@@ -1,7 +1,7 @@
 ---
 title: Pantalla
 description: Uno de los problemas comunes con las laptops es el fallo de la pantalla, haciendo necesaria la reparación o cambio.
-heroImage: /images/contents/197.png
+heroImage: /images/contents/197.webp
 pubDate: Jul 08 2022
 modDate: Jul 08 2022
 draft: false
