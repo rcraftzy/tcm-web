@@ -1,7 +1,7 @@
 ---
 title: Mejoras
 description: La mayoría de laptops, hoy en día, permiten obtener mejoras en el dispositivo al tener diseños modulares.
-heroImage: /images/contents/197.png
+heroImage: /images/contents/197.webp
 pubDate: Jul 08 2022
 modDate: Jul 08 2022
 draft: false

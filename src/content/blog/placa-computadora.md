@@ -1,7 +1,7 @@
 ---
 title: Placa
 description: En la placa base también conocida como placa madre, es donde se conectan todos los componentes de nuestro dispositivo, por lo cual es una parte esencial para la integración de todos los componentes del equipo.
-heroImage: /images/contents/197.png
+heroImage: /images/contents/197.webp
 pubDate: Jul 08 2022
 modDate: Jul 08 2022
 draft: false

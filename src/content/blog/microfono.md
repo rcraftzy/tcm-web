@@ -1,7 +1,7 @@
 ---
 title: Micrófono
 description: El micrófono es el complemento del dispositivo que se encarga de captar el sonido, es indispensable para realizar llamadas o grabar videos.
-heroImage: /images/contents/Microfono-300x212.png
+heroImage: /images/contents/Microfono-300x212.webp
 pubDate: Jul 08 2022
 modDate: Jul 08 2022
 draft: false

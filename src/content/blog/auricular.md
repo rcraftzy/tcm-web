@@ -1,7 +1,7 @@
 ---
 title: Auricular
 description: El auricular es el complemento del dispositivo que se encarga de emitir sonido en la parte superior del dispositivo, junto al altavoz es indispensable para reproducir el sonido al momento de contestar llamadas o escuchar audios.
-heroImage: /images/contents/Auricular-300x212.png
+heroImage: /images/contents/Auricular-300x212.webp
 pubDate: Jul 08 2022
 modDate: Jul 08 2022
 draft: false
