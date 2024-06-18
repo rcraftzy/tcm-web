@@ -21,8 +21,8 @@ const { currentPage, totalPages, paginatedPosts} = Astro.props;
   <Pagination
     {currentPage}
     {totalPages}
-    prevUrl={`/contenido/articulos/${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
-    nextUrl={`/contenido/articulos/${currentPage + 1}/`}
+    prevUrl={`/contenido/articulos/${currentPage - 1 !== 1 ? (currentPage - 1) : ""}`}
+    nextUrl={`/contenido/articulos/${currentPage + 1}`}
   />
 </header>
 <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 group">
@@ -33,6 +33,6 @@ const { currentPage, totalPages, paginatedPosts} = Astro.props;
 <Pagination
   {currentPage}
   {totalPages}
-  prevUrl={`/contenido/articulos/${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
-  nextUrl={`/contenido/articulos/${currentPage + 1}/`}
+  prevUrl={`/contenido/articulos/${currentPage - 1 !== 1 ? (currentPage - 1) : ""}`}
+  nextUrl={`/contenido/articulos/${currentPage + 1}`}
 />
