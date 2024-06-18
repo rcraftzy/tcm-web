@@ -1,15 +1,12 @@
 import { Autoplay, Navigation, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperNavButton } from "./SwiperNavButton";
+import { STOREPAGE_URL } from "../config";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-import { VanishingStripes } from "./Backgrounds/VanishingStripes";
-import { RainbowVortex } from "./Backgrounds/RainbowVortex";
-import { BermudaSquare } from "./Backgrounds/BermudaSquare";
-import { STOREPAGE_URL } from "../config";
 
 const Slider = () => {
 	return (
@@ -22,12 +19,19 @@ const Slider = () => {
 				delay: 5500,
 				disableOnInteraction: false,
 			}}
-			modules={[Autoplay, Navigation, EffectFade]}
+			modules={[Navigation, EffectFade]}
 		>
-			<SwiperSlide className="bg-black">
-				<div className="w-full relative">
-					<div className="w-full h-[660px] md:h-80">
-						<VanishingStripes className="object-cover h-[864px]" />
+			<SwiperSlide>
+				<div className="w-full h-[664px] md:h-80 z-0">
+					<div className="w-full h-full">
+						<img
+							alt="vanishing-stripes-background"
+							src="/images/backgrounds/vanishing-stripes.svg"
+							className="object-cover h-full"
+							width={864}
+							height={320}
+							loading={"eager"}
+						/>
 					</div>
 					<div className="absolute z-10 top-0 w-full">
 						<section className="flex items-center md:items-start md:justify-between flex-col md:flex-row mx-20 md:ml-24 md:mr-14">
@@ -57,13 +61,19 @@ const Slider = () => {
 							</div>
 							<section className="flex">
 								<img
-									src="/images/products/precalentadora1.webp"
-									className="h-96 md:h-80"
+									src="images/products/precalentadora1.webp"
+									className="h-96 w-28 md:h-80 md:w-24"
+									width={112}
+									height={384}
+									loading={"eager"}
 									alt="precalentadora"
 								/>
 								<img
-									src="/images/products/precalentadora2.webp"
-									className="h-96 md:h-80"
+									src="images/products/precalentadora2.webp"
+									className="h-96 w-28 md:h-80 md:w-24"
+									width={112}
+									height={384}
+									loading={"eager"}
 									alt="precalentadora"
 								/>
 							</section>
@@ -71,13 +81,16 @@ const Slider = () => {
 					</div>
 				</div>
 			</SwiperSlide>
-			<SwiperSlide className="bg-white">
-				<div className="w-full relative">
-					<div className="w-full h-[660px] md:h-80">
+			<SwiperSlide>
+				<div className="w-full h-[664px] md:h-80">
+					<div className="w-full h-full">
 						<img
-							alt="background"
-							src="/images/backgrounds/parabolic-ellipse.png"
-							className="object-cover object-top h-[900px]"
+							alt="parabolic-ellipse-background"
+							src="/images/backgrounds/parabolic-ellipse.svg"
+							className="object-cover object-top h-full"
+							width={864}
+							height={664}
+							loading={"eager"}
 						/>
 					</div>
 					<div className="absolute h-full z-20 top-0 w-full">
@@ -93,9 +106,7 @@ const Slider = () => {
 										<a
 											target="_blank"
 											rel="noopener noreferrer"
-											href={
-												STOREPAGE_URL + "/products/cnc"
-											}
+											href={STOREPAGE_URL + "/products/cnc"}
 											className="btn bg-black text-zinc-300"
 										>
 											<span className="text-xl md:text-base font-bold">
@@ -112,6 +123,7 @@ const Slider = () => {
 											src="/images/products/CNC.webp"
 											className="h-80 md:h-64 z-30"
 											alt="cnc"
+											loading={"eager"}
 										/>
 									</div>
 								</div>
@@ -120,10 +132,17 @@ const Slider = () => {
 					</div>
 				</div>
 			</SwiperSlide>
-			<SwiperSlide className="bg-white">
-				<div className="w-full relative">
-					<div className="w-full h-[660px] md:h-80">
-						<RainbowVortex className="h-[660px] w-[1300px] object-cover object-top" />
+			<SwiperSlide>
+				<div className="w-full h-[664px] md:h-80">
+					<div className="w-full h-full">
+						<img
+							alt="background"
+							src="/images/backgrounds/rainbow-vortex.svg"
+							className="object-cover object-top h-full"
+							width={864}
+							height={664}
+							loading={"eager"}
+						/>
 					</div>
 					<div className="absolute h-full z-20 top-0 w-full">
 						<section className="grid h-full grid-cols-1 md:grid-cols-3 mx-5 md:ml-24 md:mr-0">
@@ -158,12 +177,14 @@ const Slider = () => {
 											src="/images/products/P4.webp"
 											className="h-80 md:h-52 z-30 brightness-0"
 											alt="lcd para zte blade v4"
+											loading={"eager"}
 										/>
 									</div>
 									<div className="absolute mr-28 md:mr-16">
 										<img
 											src="/images/products/P3.webp"
 											className="h-80 md:h-52 z-40"
+											loading={"eager"}
 											alt="lcd para zte blade v4"
 										/>
 									</div>
@@ -174,9 +195,16 @@ const Slider = () => {
 				</div>
 			</SwiperSlide>
 			<SwiperSlide>
-				<div className="w-full relative h-[660px] md:h-80">
-					<div className="w-full">
-						<BermudaSquare className="object-cover object-center h-[864px]" />
+				<div className="w-full h-[664px] md:h-80 z-0">
+					<div className="w-full h-full">
+						<img
+							alt="background"
+							src="/images/backgrounds/bermuda-square.svg"
+							className="object-cover object-top h-full"
+							width={864}
+							height={664}
+							loading={"eager"}
+						/>
 					</div>
 					<div className="absolute h-full z-20 top-0 w-full">
 						<section className="grid h-full grid-cols-1 md:grid-cols-3 mx-5 md:ml-24 md:mr-7">
@@ -212,6 +240,7 @@ const Slider = () => {
 											src="/images/products/P1.webp"
 											className="h-80 md:h-52 z-30"
 											alt="touchsurface3pro"
+											loading={"eager"}
 										/>
 									</div>
 									<div className="absolute mr-28 md:mr-16">
@@ -219,6 +248,7 @@ const Slider = () => {
 											src="/images/products/P2.webp"
 											className="h-80 md:h-52 z-40"
 											alt="touchsurface3pro"
+											loading={"eager"}
 										/>
 									</div>
 								</div>
@@ -228,12 +258,15 @@ const Slider = () => {
 				</div>
 			</SwiperSlide>
 			<SwiperSlide>
-				<div className="w-full relative">
-					<div className="w-full h-[660px] md:h-80">
+				<div className="w-full h-[664px] md:h-80 z-0">
+					<div className="w-full h-full">
 						<img
-							alt="background"
-							src="/images/backgrounds/quantum-gradient.png"
-							className="object-cover object-top h-[900px]"
+							alt="quantum-gradient-background"
+							src="/images/backgrounds/quantum-gradient.svg"
+							className="object-cover h-full"
+							width={864}
+							height={664}
+							loading={"eager"}
 						/>
 					</div>
 					<div className="absolute h-full z-20 top-0 w-full">
@@ -250,9 +283,7 @@ const Slider = () => {
 										<a
 											target="_blank"
 											rel="noopener noreferrer"
-											href={
-												STOREPAGE_URL + "/products/lcd-para-lenovo-tab-m10"
-											}
+											href={STOREPAGE_URL + "/products/lcd-para-lenovo-tab-m10"}
 											className="btn bg-black text-zinc-300"
 										>
 											<span className="text-xl md:text-base font-bold">
@@ -269,6 +300,7 @@ const Slider = () => {
 											src="/images/products/P6.webp"
 											className="h-80 md:h-56"
 											alt="touchsurface3pro"
+											loading={"eager"}
 										/>
 									</div>
 									<div className="absolute mr-28 md:mr-16 brightness-125 contrast-200 saturate-50">
@@ -276,6 +308,7 @@ const Slider = () => {
 											src="/images/products/P5.webp"
 											className="h-80 md:h-56"
 											alt="touchsurface3pro"
+											loading={"eager"}
 										/>
 									</div>
 								</div>
