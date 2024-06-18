@@ -27,7 +27,7 @@ const Slider = () => {
 						<img
 							alt="vanishing-stripes-background"
 							src="/images/backgrounds/vanishing-stripes.svg"
-							className="object-cover h-full"
+							className="object-cover object-top h-full"
 							width={864}
 							height={320}
 							loading={"eager"}
