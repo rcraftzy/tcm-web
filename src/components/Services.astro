@@ -5,17 +5,17 @@ import { Image } from "astro:assets";
   <div class="flex justify-center">
     <section class="flex flex-col md:flex-row-reverse bg-sky-800 p-5 md:py-5 md:px-14 justify-between gap-8">
       <div class="max-w-[360px] flex-1">
-        <h2 class="text-zinc-300 mt-14 md:mt-20 text-5xl text-center">Brindamos servicios profesionales</h2>
+        <h2 class="text-zinc-300 mt-14 md:mt-20 font-medium text-5xl text-center">Brindamos servicios profesionales</h2>
         <article class="bg-sky-600 p-7 rounded mt-10">
           <header class="mb-6">
             <span class="text-base text-zinc-300">Repuestos</span>
           </header>
           <div class="flex justify-center">
             <Image
-            class="object-contain aspect-square"
+            class="object-contain aspect-square w-64 h-64"
             src='/images/services/celular.webp'
-            width={260}
-            height={144}
+            width={256}
+            height={256}
             alt="tumbnail"
             loading={'lazy'}
           />
@@ -30,10 +30,10 @@ import { Image } from "astro:assets";
           </header>
           <div class="relative flex justify-center">
             <Image
-            class="object-contain aspect-square"
+            class="object-contain aspect-square w-64 h-64"
             src='/images/services/playstation.webp'
-            width={260}
-            height={144}
+            width={256}
+            height={256}
             alt="tumbnail"
             loading={'eager'}
           />
@@ -58,10 +58,10 @@ import { Image } from "astro:assets";
           </header>
           <div class="relative flex justify-center">
             <Image
-            class="object-contain aspect-square"
+            class="object-contain aspect-square w-64 h-64"
             src='/images/services/computadora.webp'
-            width={260}
-            height={144}
+            width={256}
+            height={256}
             alt="tumbnail"
             loading={'eager'}
           />
