@@ -4,8 +4,7 @@ export default {
 	theme: {
 		extend: {
       fontFamily: {
-        mplus: ["'M PLUS Rounded 1c'", 'Verdana', 'sans-serif'],
-        exo: ["'Exo 2 Variable'", 'sans-serif']
+        roboto: ["'Roboto'", 'sans-serif']
       },
     },
 	},

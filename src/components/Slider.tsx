@@ -34,10 +34,10 @@ const Slider = () => {
 						/>
 					</div>
 					<div className="absolute z-10 top-0 w-full">
-						<section className="flex items-center md:items-start md:justify-between flex-col md:flex-row mx-20 md:ml-24 md:mr-14">
+						<section className="flex items-center md:items-start md:justify-between flex-col md:flex-row mx-20 md:ml-20 md:mr-14">
 							<div className="md:mt-20 mt-10">
 								<header>
-									<h2 className="font-exo font-bold text-white text-center md:text-left text-5xl">
+									<h2 className="font-roboto font-bold text-white text-center md:text-left text-5xl">
 										<span className="block">Precalentadora</span>
 										<span>D-Heater Pro V2</span>
 									</h2>
@@ -94,10 +94,10 @@ const Slider = () => {
 						/>
 					</div>
 					<div className="absolute h-full z-20 top-0 w-full">
-						<section className="grid h-full grid-cols-1 md:grid-cols-3 mx-5 md:ml-24 md:mr-0">
+						<section className="grid h-full grid-cols-1 md:grid-cols-3 mx-5 md:ml-20 md:mr-0">
 							<div className="col-span-1 md:col-span-2 md:mt-20 mt-10">
 								<header>
-									<h2 className="font-exo font-bold text-white text-center md:text-left text-8xl">
+									<h2 className="font-roboto font-bold text-white text-center md:text-left text-8xl">
 										<span className="block">CNC</span>
 									</h2>
 								</header>
@@ -147,10 +147,10 @@ const Slider = () => {
 						/>
 					</div>
 					<div className="absolute h-full z-20 top-0 w-full">
-						<section className="grid h-full grid-cols-1 md:grid-cols-3 mx-5 md:ml-24 md:mr-0">
+						<section className="grid h-full grid-cols-1 md:grid-cols-3 mx-5 md:ml-20 md:mr-0">
 							<div className="col-span-1 md:col-span-2 md:mt-20 mt-10">
 								<header>
-									<h2 className="font-exo font-bold text-white text-center md:text-left text-5xl">
+									<h2 className="font-roboto font-bold text-white text-center md:text-left text-5xl">
 										<span className="block">LCD PARA</span>
 										<span className="block">ZTE BLADE V4</span>
 									</h2>
@@ -213,10 +213,10 @@ const Slider = () => {
 						/>
 					</div>
 					<div className="absolute h-full z-20 top-0 w-full">
-						<section className="grid h-full grid-cols-1 md:grid-cols-3 mx-5 md:ml-24 md:mr-7">
+						<section className="grid h-full grid-cols-1 md:grid-cols-3 mx-5 md:ml-20 md:mr-7">
 							<div className="col-span-1 md:col-span-2 md:mt-20 mt-10">
 								<header>
-									<h2 className="font-exo font-bold text-white text-center md:text-left text-5xl">
+									<h2 className="font-roboto font-bold text-white text-center md:text-left text-5xl">
 										<span className="block">Touch Microsoft</span>
 										<span>Surface Pro 3</span>
 									</h2>
@@ -280,10 +280,10 @@ const Slider = () => {
 						/>
 					</div>
 					<div className="absolute h-full z-20 top-0 w-full">
-						<section className="grid h-full grid-cols-1 md:grid-cols-3 mx-5 md:ml-24 md:mr-7">
+						<section className="grid h-full grid-cols-1 md:grid-cols-3 mx-5 md:ml-20 md:mr-7">
 							<div className="col-span-1 md:col-span-2 md:mt-20 mt-10">
 								<header>
-									<h2 className="font-exo font-bold text-white text-center md:text-left text-5xl">
+									<h2 className="font-roboto font-bold text-white text-center md:text-left text-5xl">
 										<span className="block">LCD LENOVO</span>
 										<span>TAB M10</span>
 									</h2>
