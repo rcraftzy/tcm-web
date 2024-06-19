@@ -17,6 +17,7 @@ export const SwiperNavButton = () => {
 	return (
 		<div className="absolute inset-x-0 z-10 top-1/2">
 			<button
+        id="slide-prev"
 				className="absolute z-20 left-3"
 				onClick={() => swiper.slidePrev()}
 			>
@@ -25,6 +26,7 @@ export const SwiperNavButton = () => {
 				</div>
 			</button>
 			<button
+        id="slide-next"
 				className="absolute z-20 right-3"
 				onClick={() => swiper.slideNext()}
 			>

@@ -62,7 +62,7 @@ const Slider = () => {
 							<section className="flex">
 								<img
 									src="images/products/precalentadora1.webp"
-									className="h-96 w-[119px] md:h-80 md:w-24"
+									className="h-96 w-[119px] md:h-80 md:w-24 aspect-auto"
 									width={119}
 									height={384}
 									loading={"eager"}
@@ -70,7 +70,7 @@ const Slider = () => {
 								/>
 								<img
 									src="images/products/precalentadora2.webp"
-									className="h-96 w-[117px] md:h-80 md:w-24"
+									className="h-96 w-[117px] md:h-80 md:w-24 aspect-auto"
 									width={117}
 									height={384}
 									loading={"eager"}
@@ -121,7 +121,7 @@ const Slider = () => {
 									<div className="absolute mb-14 md:mb-6">
 										<img
 											src="/images/products/CNC.webp"
-											className="h-80 w-80 md:h-64 z-30"
+											className="h-80 w-80 md:h-64 z-30 aspect-auto"
                       width={320}
                       height={320}
 											alt="cnc"
@@ -177,7 +177,7 @@ const Slider = () => {
 									<div className="absolute ml-24 md:ml-16 mb-14 md:mb-6">
 										<img
 											src="/images/products/P4.webp"
-											className="h-80 md:h-52 z-30 md:w-[106px] brightness-0"
+											className="h-80 md:h-52 z-30 md:w-[106px] brightness-0 aspect-auto"
                       width={164}
                       height={320}
 											alt="lcd para zte blade v4"
@@ -187,7 +187,7 @@ const Slider = () => {
 									<div className="absolute mr-28 md:mr-16">
 										<img
 											src="/images/products/P3.webp"
-											className="h-80 w-[164px] md:h-52 md:w-[106px] z-40"
+											className="h-80 w-[164px] md:h-52 md:w-[106px] z-40 aspect-auto"
                       width={164}
                       height={320}
 											loading={"eager"}
@@ -244,7 +244,7 @@ const Slider = () => {
 									<div className="absolute ml-24 md:ml-16 mb-14 md:mb-6">
 										<img
 											src="/images/products/P1.webp"
-											className="h-80 w-64 md:h-52 z-30"
+											className="h-80 w-64 md:h-52 z-30 aspect-auto"
                       width={256}
                       height={320}
 											alt="touchsurface3pro"
@@ -254,7 +254,7 @@ const Slider = () => {
 									<div className="absolute mr-28 md:mr-16">
 										<img
 											src="/images/products/P2.webp"
-											className="h-80 w-64 md:h-52 z-40"
+											className="h-80 w-64 md:h-52 z-40 aspect-auto"
                       width={256}
                       height={320}
 											alt="touchsurface3pro"
@@ -308,7 +308,7 @@ const Slider = () => {
 									<div className="absolute ml-24 md:ml-16 mb-14 md:mb-6 brightness-75 saturate-50 contrast-200">
 										<img
 											src="/images/products/P6.webp"
-											className="h-80 w-[218px] md:h-56"
+											className="h-80 w-[218px] md:h-56  aspect-auto"
                       width={218}
                       height={320}
 											alt="touchsurface3pro"
@@ -318,7 +318,7 @@ const Slider = () => {
 									<div className="absolute mr-28 md:mr-16 brightness-125 contrast-200 saturate-50">
 										<img
                       src="/images/products/P5.webp"
-                      className="h-80 w-[223px] md:h-56 md:w-[156px]"
+                      className="h-80 w-[223px] md:h-56 md:w-[156px] aspect-auto"
                       width={223}
                       height={320}
 											alt="touchsurface3pro"
