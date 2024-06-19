@@ -33,7 +33,7 @@ export default function ContentPages ({posts: params}) {
   return (
     <>
       <header className="flex justify-between mb-6">
-        <a href="videos" className="bg-[#00538F] font-mplus pt-1.5 px-4 rounded-xl">Ver Videos</a>
+        <a href="videos" className="bg-[#00538F] pt-1.5 px-4 rounded-xl">Ver Videos</a>
         <div className="flex gap-1">
           {
             minValue === min 

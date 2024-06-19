@@ -17,12 +17,12 @@ export default defineConfig({
     gfm: true,
     remarkPlugins: [remarkReadingTime],
     rehypePlugins: [[addClasses, {
-      h1: "font-mplus mb-16",
-      h2: "text-4xl font-semibold font-mplus mb-2",
-      h3: "text-2xl font-bold font-mplus mb-2",
-      h4: "text-lg font-bold font-mplus",
-      h5: "font-bold font-mplus",
-      h6: "font-bold font-mplus",
+      h1: "font-roboto mb-16",
+      h2: "text-4xl font-semibold font-roboto mb-2",
+      h3: "text-2xl font-bold font-roboto mb-2",
+      h4: "text-lg font-bold font-roboto",
+      h5: "font-bold font-roboto",
+      h6: "font-bold font-roboto",
       p: "mb-6"
     }]]
   }
