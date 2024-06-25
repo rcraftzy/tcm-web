@@ -19,7 +19,7 @@ const Slider = () => {
 				delay: 5500,
 				disableOnInteraction: false,
 			}}
-			modules={[Navigation, EffectFade]}
+			modules={[Autoplay, Navigation, EffectFade]}
 		>
 			<SwiperSlide>
 				<div className="w-full h-[664px] md:h-80 z-0">
