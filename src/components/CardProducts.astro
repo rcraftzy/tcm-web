@@ -1,13 +1,17 @@
 ---
 import { Image } from "astro:assets";
 import { STOREPAGE_URL } from "../config";
-import type { Product } from "../types"
+import type { Product } from "../types";
 
 export interface Props {
-  product: Product;
+	product: Product;
 }
 
 const { product } = Astro.props;
+
+const formatPrice = (amount: any) => {
+	return parseFloat(amount).toFixed(2);
+};
 ---
 <a 
   class="group cursor-pointer relative grid justify-items-center overflow-hidden align-items-center"
@@ -16,5 +20,5 @@ const { product } = Astro.props;
 >
   <Image alt="thumbnail" class={`object-scale-down aspect-square h-44 w-44 transition duration-700 ease-in-out group-hover:scale-110`} src={product.node.images.edges[0].node.originalSrc} width={176} height={176} loading={"eager"} />
   <h4 class="font-extrabold w-64 text-center group-hover:text-blue-800">{product.node.title}</h4>
-  <span class="font-extrabold text-center mt-4">${product.node.priceRange.maxVariantPrice.amount}</span>
+  <span class="font-extrabold text-center mt-4">${formatPrice(product.node.priceRange.maxVariantPrice.amount)}</span>
 </a>
