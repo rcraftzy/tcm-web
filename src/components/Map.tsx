@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import type { Location } from "../modules/locations/domain/Location";
+import type { Location } from "../types";
 
 interface Coordinates {
 	lat: number;
