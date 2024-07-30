@@ -58,3 +58,9 @@ export interface Node {
 export interface Product {
 	node: Node;
 }
+
+export interface Location {
+	latitude: number;
+	longitude: number;
+	name: string;
+}
