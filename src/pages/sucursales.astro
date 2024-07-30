@@ -1,0 +1,35 @@
+---
+import { Locations } from "../components/Locations";
+import Header from "../components/Header.astro";
+import Body from "../components/Body.astro";
+import BaseHead from "../components/BaseHead.astro";
+import CarouselSucursales from "../components/CarouselSucursales";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
+import Footer from "../components/Footer.astro";
+import { GET } from "./locations.json";
+
+let locations = await GET(Astro);
+const result = await locations.json()
+---
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <BaseHead title={`Sucursales | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Header />
+      <main class="pt-20">
+      <section class="mx-auto max-w-4xl">
+        <Locations locations={result} client:idle />
+      </section>
+      <section class="bg-sky-950 pb-20 pt-14">
+        <h3 class="text-white text-center mb-16">Encuentranos en nuestras sucursales</h3>
+        <div class="max-w-6xl mx-auto">
+          <CarouselSucursales client:load />
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </Body>
+</html>
+
