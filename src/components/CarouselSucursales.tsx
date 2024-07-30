@@ -39,24 +39,24 @@ export default function CarouselSucursales() {
 				720: {
 					slidesPerView: 1.5,
 				},
-        740: {
-          slidesPerView: 1.7,
-        },
+				740: {
+					slidesPerView: 1.7,
+				},
 				769: {
 					slidesPerView: 1.8,
 				},
 				800: {
 					slidesPerView: 1.8,
 				},
-        860: {
-          slidesPerView: 2.1,
-        },
-        900: {
-          slidesPerView: 2.1,
-        },
-        940: {
-          slidesPerView: 2.2,
-        },
+				860: {
+					slidesPerView: 2.1,
+				},
+				900: {
+					slidesPerView: 2.1,
+				},
+				940: {
+					slidesPerView: 2.2,
+				},
 				980: {
 					slidesPerView: 2.3,
 				},
@@ -152,7 +152,11 @@ export default function CarouselSucursales() {
 									<GoogleMapsIcon />
 								</div>
 							</a>
-							<a href="" className="bg-white rounded-lg p-1">
+							<a
+								href="https://www.waze.com/es-419/live-map/directions?to=ll.-2.73734306%2C-78.84678391"
+								className="bg-white rounded-lg p-1"
+								target="_blank"
+							>
 								<div className="w-8 h-8 ml-0.5 mt-0.5">
 									<WazeIcon />
 								</div>
@@ -189,7 +193,11 @@ export default function CarouselSucursales() {
 									<GoogleMapsIcon />
 								</div>
 							</a>
-							<a href="" className="bg-white rounded-lg p-1">
+							<a
+								href="https://www.waze.com/es-419/live-map/directions?to=ll.-2.71223763%2C-78.88966765"
+								className="bg-white rounded-lg p-1"
+								target="_blank"
+							>
 								<div className="w-8 h-8 ml-0.5 mt-0.5">
 									<WazeIcon />
 								</div>
@@ -230,7 +238,7 @@ export default function CarouselSucursales() {
 								</div>
 							</a>
 							<a
-								href="https://www.waze.com/es-419/live-map/directions?navigate=yes&to=ll.-2.7368045%2C-78.8472221"
+								href="https://www.waze.com/es-419/live-map/directions?to=ll.-2.73680744%2C-78.84723544"
 								target="_blank"
 								className="bg-white rounded-lg p-1"
 							>
