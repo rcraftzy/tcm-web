@@ -188,7 +188,7 @@ export default function CarouselSucursales() {
 							<span>Domingo, de 9:00am a 5:00pm</span>
 						</div>
 						<div className="flex justify-end gap-4 mt-4">
-							<a href="" target="_blank" className="bg-white rounded-lg p-1">
+							<a href="https://maps.app.goo.gl/gaYmaYMaJGbQG6qy9" target="_blank" className="bg-white rounded-lg p-1">
 								<div className="w-9 h-9">
 									<GoogleMapsIcon />
 								</div>
